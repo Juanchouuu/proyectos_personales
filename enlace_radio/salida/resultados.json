@@ -1,0 +1,2351 @@
+{
+ "resumen": {
+  "distancia_km": 27.998921202803615,
+  "azimut_AB": 0.0,
+  "azimut_BA": 180.0,
+  "elev_A": 2562.4400000000187,
+  "elev_B": 2646.0640000000667,
+  "nombre_A": "Central (Bogotá D.C., sector Calle 100 - Autopista Norte)",
+  "nombre_B": "Sede rural (zona rural entre Cajicá y Zipaquirá, Cundinamarca)",
+  "cap_req": 200.0,
+  "disp_req": 99.99,
+  "ini_id": "D0",
+  "ini_desc": "13 GHz, canal 28 MHz, pol. V, antenas de 0,6 m",
+  "ini_cumple": false,
+  "ini_disp": 99.74328065403449,
+  "ini_A001": 50.989026564096974,
+  "ini_margen": 12.085232010855684,
+  "ini_motivos": "disponibilidad 99.7433 % < 99.99 %",
+  "fin_id": "A082",
+  "fin_desc": "7 GHz, 28 MHz, pol. V, antenas de 0.9 m",
+  "fin_cumple": true,
+  "banda": "7 GHz",
+  "f_GHz": 7.4,
+  "ancho": 28,
+  "pol": "V",
+  "antena_m": 0.9,
+  "G": 34.51034791435952,
+  "hA": 21.0,
+  "hB": 12.0,
+  "despeje_k43": 1.018520971358497,
+  "despeje_k23": 0.46843498023703695,
+  "d_critico": 4.8915585809828395,
+  "fspl": 138.77746036096727,
+  "gases": 0.28442468989515934,
+  "prx": -49.04118922214338,
+  "mod_ref": "512QAM",
+  "cap_ref": 200.0,
+  "umbral_ref": -66.0,
+  "margen": 16.95881077785662,
+  "mod_max": "2048QAM",
+  "cap_max": 245.0,
+  "td": 0.15198840807223205,
+  "margen_ef": 16.80682236978439,
+  "A001": 13.84906433588652,
+  "gamma": 1.4489547663242066,
+  "r": 0.3413691782125549,
+  "p_lluvia": 0.005737438825142107,
+  "p_multi": 0.0003539049176923316,
+  "p_total": 0.006091343742834438,
+  "disp": 99.99390865625716,
+  "costo": 3.4280000000000004,
+  "n_eval": 88,
+  "n_cumplen": 9,
+  "R001": 95.0,
+  "altas_cumplen": [
+   "11 GHz, 56 MHz, pol. V, antenas de 1.8 m"
+  ]
+ },
+ "diseno_final": {
+  "id": "A082",
+  "origen": "alternativa",
+  "banda": "7 GHz",
+  "f_GHz": 7.4,
+  "ancho_MHz": 28,
+  "pol": "V",
+  "antena_m": 0.9,
+  "familia": "cambio de banda, antenas mayores",
+  "descripcion": "7 GHz, 28 MHz, pol. V, antenas de 0.9 m",
+  "alturas": {
+   "hA_m": 21.0,
+   "hB_m": 12.0,
+   "detalle": {
+    "k_mediano": {
+     "k": 1.3333,
+     "fraccion_exigida": 1.0,
+     "despeje_rel_min": 1.018520971358497,
+     "d_critico_km": 4.8915585809828395,
+     "despeje_min_m": 13.029572704592283,
+     "f1_critico_m": 12.792640574904922
+    },
+    "k_minimo": {
+     "k": 0.6667,
+     "fraccion_exigida": 0.3,
+     "despeje_rel_min": 0.46843498023703695,
+     "d_critico_km": 9.242945048728311,
+     "despeje_min_m": 7.421397926540976,
+     "f1_critico_m": 15.842962715520537
+    }
+   },
+   "criterios": [
+    [
+     1.3333,
+     1.0
+    ],
+    [
+     0.6667,
+     0.3
+    ]
+   ]
+  },
+  "presupuesto": {
+   "G_dBi": 34.51034791435952,
+   "ancho_haz_deg": 3.1509717807807807,
+   "FSPL_dB": 138.77746036096727,
+   "gamma_o_dB_km": 0.007545840669051099,
+   "gamma_w_dB_km": 0.004777912505369042,
+   "A_gases_dB": 0.28442468989515934,
+   "Lt_dB": 0.5,
+   "Lr_dB": 0.5,
+   "Lvarias_dB": 1.0,
+   "tabla": [
+    {
+     "mod": "QPSK",
+     "capacidad_Mbps": 44.0,
+     "umbral_dBm": -87.0,
+     "ptx_dBm": 28.0,
+     "snr_dB": 10.5,
+     "pire_dBm": 62.01034791435952,
+     "prx_dBm": -44.04118922214338,
+     "margen_dB": 42.95881077785662
+    },
+    {
+     "mod": "16QAM",
+     "capacidad_Mbps": 89.0,
+     "umbral_dBm": -81.0,
+     "ptx_dBm": 27.0,
+     "snr_dB": 17.0,
+     "pire_dBm": 61.01034791435952,
+     "prx_dBm": -45.04118922214338,
+     "margen_dB": 35.95881077785662
+    },
+    {
+     "mod": "32QAM",
+     "capacidad_Mbps": 111.0,
+     "umbral_dBm": -78.0,
+     "ptx_dBm": 26.0,
+     "snr_dB": 20.0,
+     "pire_dBm": 60.01034791435952,
+     "prx_dBm": -46.04118922214338,
+     "margen_dB": 31.95881077785662
+    },
+    {
+     "mod": "64QAM",
+     "capacidad_Mbps": 135.0,
+     "umbral_dBm": -75.0,
+     "ptx_dBm": 26.0,
+     "snr_dB": 23.0,
+     "pire_dBm": 60.01034791435952,
+     "prx_dBm": -46.04118922214338,
+     "margen_dB": 28.95881077785662
+    },
+    {
+     "mod": "128QAM",
+     "capacidad_Mbps": 157.5,
+     "umbral_dBm": -72.0,
+     "ptx_dBm": 25.0,
+     "snr_dB": 26.0,
+     "pire_dBm": 59.01034791435952,
+     "prx_dBm": -47.04118922214338,
+     "margen_dB": 24.95881077785662
+    },
+    {
+     "mod": "256QAM",
+     "capacidad_Mbps": 180.0,
+     "umbral_dBm": -69.0,
+     "ptx_dBm": 24.0,
+     "snr_dB": 29.0,
+     "pire_dBm": 58.01034791435952,
+     "prx_dBm": -48.04118922214338,
+     "margen_dB": 20.95881077785662
+    },
+    {
+     "mod": "512QAM",
+     "capacidad_Mbps": 200.0,
+     "umbral_dBm": -66.0,
+     "ptx_dBm": 23.0,
+     "snr_dB": 32.0,
+     "pire_dBm": 57.01034791435952,
+     "prx_dBm": -49.04118922214338,
+     "margen_dB": 16.95881077785662
+    },
+    {
+     "mod": "1024QAM",
+     "capacidad_Mbps": 222.5,
+     "umbral_dBm": -63.0,
+     "ptx_dBm": 22.0,
+     "snr_dB": 35.0,
+     "pire_dBm": 56.01034791435952,
+     "prx_dBm": -50.04118922214338,
+     "margen_dB": 12.95881077785662
+    },
+    {
+     "mod": "2048QAM",
+     "capacidad_Mbps": 245.0,
+     "umbral_dBm": -59.5,
+     "ptx_dBm": 20.0,
+     "snr_dB": 38.5,
+     "pire_dBm": 54.01034791435952,
+     "prx_dBm": -52.04118922214338,
+     "margen_dB": 7.45881077785662
+    }
+   ],
+   "ref": {
+    "mod": "512QAM",
+    "capacidad_Mbps": 200.0,
+    "umbral_dBm": -66.0,
+    "ptx_dBm": 23.0,
+    "snr_dB": 32.0,
+    "pire_dBm": 57.01034791435952,
+    "prx_dBm": -49.04118922214338,
+    "margen_dB": 16.95881077785662
+   },
+   "max_cielo_despejado": {
+    "mod": "2048QAM",
+    "capacidad_Mbps": 245.0,
+    "umbral_dBm": -59.5,
+    "ptx_dBm": 20.0,
+    "snr_dB": 38.5,
+    "pire_dBm": 54.01034791435952,
+    "prx_dBm": -52.04118922214338,
+    "margen_dB": 7.45881077785662
+   }
+  },
+  "interferencia": {
+   "escenarios": [
+    {
+     "nombre": "Enlace cocanal existente Chía-Cota (misma polarización)",
+     "distancia_km": 9.0,
+     "angulo_victima_deg": 20.0,
+     "G_tx_fuera_eje_dBi": 1.6926762193761888,
+     "G_fuera_eje_dBi": 6.007714845976736,
+     "pire_hacia_victima_dBm": 25.69267621937619,
+     "I_dBm": -127.7190935180531,
+     "N_dBm": -94.5284196865778,
+     "I_N_dB": -33.190673831475294,
+     "degradacion_umbral_dB": 0.0020826332238652497,
+     "C_I_dB": 78.67790429590971,
+     "C_I_requerida_dB": 42.0,
+     "cumple": true,
+     "cocanal_I_N_dB": -3.1906738314752943,
+     "mitigacion": "polarización cruzada (XPD 30 dB)"
+    },
+    {
+     "nombre": "Enlace cocanal en Zipaquirá (polarización cruzada)",
+     "distancia_km": 5.0,
+     "angulo_victima_deg": 30.0,
+     "G_tx_fuera_eje_dBi": 10.892095851741047,
+     "G_fuera_eje_dBi": 1.6054333695847092,
+     "pire_hacia_victima_dBm": 34.89209585174105,
+     "I_dBm": -112.81650526001414,
+     "N_dBm": -94.5284196865778,
+     "I_N_dB": -18.288085573436334,
+     "degradacion_umbral_dB": 0.06394032147669697,
+     "C_I_dB": 63.77531603787076,
+     "C_I_requerida_dB": 42.0,
+     "cumple": true,
+     "cocanal_I_N_dB": -18.288085573436334,
+     "mitigacion": "ninguna (cocanal)"
+    },
+    {
+     "nombre": "Sobrealcance de un salto propio futuro en la misma frecuencia",
+     "distancia_km": 20.0,
+     "angulo_victima_deg": 10.0,
+     "G_tx_fuera_eje_dBi": 19.809827263092796,
+     "G_fuera_eje_dBi": 13.533464737576267,
+     "pire_hacia_victima_dBm": 43.8098272630928,
+     "I_dBm": -109.01194230723007,
+     "N_dBm": -94.5284196865778,
+     "I_N_dB": -14.483522620652266,
+     "degradacion_umbral_dB": 0.15198840807223205,
+     "C_I_dB": 59.97075308508669,
+     "C_I_requerida_dB": 42.0,
+     "cumple": true,
+     "cocanal_I_N_dB": 15.516477379347734,
+     "mitigacion": "polarización cruzada (XPD 30 dB)"
+    }
+   ],
+   "degradacion_max_dB": 0.15198840807223205,
+   "cumple": true
+  },
+  "disponibilidad": {
+   "lluvia": {
+    "k": 0.0020946600106005217,
+    "alfa": 1.4359647013366643,
+    "gamma_dB_km": 1.4489547663242066,
+    "r": 0.3413691782125549,
+    "d_eff_km": 9.55796872183915,
+    "A001_dB": 13.84906433588652
+   },
+   "ref": {
+    "margen_efectivo_dB": 16.80682236978439,
+    "p_lluvia_pct": 0.005737438825142107,
+    "p_multi_pct": 0.0003539049176923316,
+    "p_total_pct": 0.006091343742834438,
+    "disponibilidad_pct": 99.99390865625716,
+    "multitrayecto": {
+     "K": 0.00011885022274370189,
+     "eps_p_mrad": 2.6652455449810573,
+     "hL_m": 2583.4400000000187,
+     "p0_pct": 0.016965584805073368,
+     "pw_pct": 0.0003539049176923316
+    }
+   },
+   "curva_acm": [
+    {
+     "mod": "QPSK",
+     "capacidad_Mbps": 44.0,
+     "margen_efectivo_dB": 42.806822369784385,
+     "p_lluvia_pct": 0.00013679076034325312,
+     "p_multi_pct": 8.889689607958838e-07,
+     "p_total_pct": 0.000137679729304049,
+     "disponibilidad_pct": 99.9998623202707
+    },
+    {
+     "mod": "16QAM",
+     "capacidad_Mbps": 89.0,
+     "margen_efectivo_dB": 35.806822369784385,
+     "p_lluvia_pct": 0.00035976648783643224,
+     "p_multi_pct": 4.4553989424179975e-06,
+     "p_total_pct": 0.00036422188677885024,
+     "disponibilidad_pct": 99.99963577811322
+    },
+    {
+     "mod": "32QAM",
+     "capacidad_Mbps": 111.0,
+     "margen_efectivo_dB": 31.80682236978439,
+     "p_lluvia_pct": 0.0006159780192927495,
+     "p_multi_pct": 1.11914561504219e-05,
+     "p_total_pct": 0.0006271694754431714,
+     "disponibilidad_pct": 99.99937283052455
+    },
+    {
+     "mod": "64QAM",
+     "capacidad_Mbps": 135.0,
+     "margen_efectivo_dB": 28.80682236978439,
+     "p_lluvia_pct": 0.0009265224459678956,
+     "p_multi_pct": 2.2329890706563494e-05,
+     "p_total_pct": 0.0009488523366744591,
+     "disponibilidad_pct": 99.99905114766332
+    },
+    {
+     "mod": "128QAM",
+     "capacidad_Mbps": 157.5,
+     "margen_efectivo_dB": 24.80682236978439,
+     "p_lluvia_pct": 0.0016264306301058374,
+     "p_multi_pct": 5.6090149482908704e-05,
+     "p_total_pct": 0.001682520779588746,
+     "disponibilidad_pct": 99.99831747922042
+    },
+    {
+     "mod": "256QAM",
+     "capacidad_Mbps": 180.0,
+     "margen_efectivo_dB": 20.80682236978439,
+     "p_lluvia_pct": 0.0029627586309407612,
+     "p_multi_pct": 0.00014089208542746243,
+     "p_total_pct": 0.0031036507163682238,
+     "disponibilidad_pct": 99.99689634928363
+    },
+    {
+     "mod": "512QAM",
+     "capacidad_Mbps": 200.0,
+     "margen_efectivo_dB": 16.80682236978439,
+     "p_lluvia_pct": 0.005737438825142107,
+     "p_multi_pct": 0.0003539049176923316,
+     "p_total_pct": 0.006091343742834438,
+     "disponibilidad_pct": 99.99390865625716
+    },
+    {
+     "mod": "1024QAM",
+     "capacidad_Mbps": 222.5,
+     "margen_efectivo_dB": 12.806822369784388,
+     "p_lluvia_pct": 0.012292012176227426,
+     "p_multi_pct": 0.0008889689607958828,
+     "p_total_pct": 0.013180981137023309,
+     "disponibilidad_pct": 99.98681901886297
+    },
+    {
+     "mod": "2048QAM",
+     "capacidad_Mbps": 245.0,
+     "margen_efectivo_dB": 7.3068223697843875,
+     "p_lluvia_pct": 0.04873663334938704,
+     "p_multi_pct": 0.003154180899034367,
+     "p_total_pct": 0.05189081424842141,
+     "disponibilidad_pct": 99.94810918575158
+    }
+   ],
+   "objetivo_pct": 0.010000000000005116,
+   "A_lluvia_margen_dB": 16.80682236978439,
+   "cumple": true,
+   "extrapolado": false
+  },
+  "cumple": true,
+  "costo": 3.4280000000000004
+ },
+ "diseno_inicial": {
+  "id": "D0",
+  "origen": "inicial",
+  "banda": "13 GHz",
+  "f_GHz": 13.0,
+  "ancho_MHz": 28,
+  "pol": "V",
+  "antena_m": 0.6,
+  "descripcion": "13 GHz, canal 28 MHz, pol. V, antenas de 0,6 m",
+  "alturas": {
+   "hA_m": 21.0,
+   "hB_m": 12.0,
+   "detalle": {
+    "k_mediano": {
+     "k": 1.3333,
+     "fraccion_exigida": 1.0,
+     "despeje_rel_min": 1.349975204890502,
+     "d_critico_km": 4.8915585809828395,
+     "despeje_min_m": 13.029572704592283,
+     "f1_critico_m": 9.651712607306091
+    },
+    "k_minimo": {
+     "k": 0.6667,
+     "fraccion_exigida": 0.3,
+     "despeje_rel_min": 0.6208763748672878,
+     "d_critico_km": 9.242945048728311,
+     "despeje_min_m": 7.421397926540976,
+     "f1_critico_m": 11.953100853816993
+    }
+   },
+   "criterios": [
+    [
+     1.3333,
+     1.0
+    ],
+    [
+     0.6667,
+     0.3
+    ]
+   ]
+  },
+  "presupuesto": {
+   "G_dBi": 35.88275538476311,
+   "ancho_haz_deg": 2.6904451358974364,
+   "FSPL_dB": 143.67169301248447,
+   "gamma_o_dB_km": 0.008580699912327489,
+   "gamma_w_dB_km": 0.018608258705793964,
+   "A_gases_dB": 0.6923198226994958,
+   "Lt_dB": 0.5,
+   "Lr_dB": 0.5,
+   "Lvarias_dB": 1.0,
+   "tabla": [
+    {
+     "mod": "QPSK",
+     "capacidad_Mbps": 44.0,
+     "umbral_dBm": -87.0,
+     "ptx_dBm": 26.0,
+     "snr_dB": 10.5,
+     "pire_dBm": 61.38275538476311,
+     "prx_dBm": -48.59850206565776,
+     "margen_dB": 38.40149793434224
+    },
+    {
+     "mod": "16QAM",
+     "capacidad_Mbps": 89.0,
+     "umbral_dBm": -81.0,
+     "ptx_dBm": 25.0,
+     "snr_dB": 17.0,
+     "pire_dBm": 60.38275538476311,
+     "prx_dBm": -49.59850206565776,
+     "margen_dB": 31.40149793434224
+    },
+    {
+     "mod": "32QAM",
+     "capacidad_Mbps": 111.0,
+     "umbral_dBm": -78.0,
+     "ptx_dBm": 24.0,
+     "snr_dB": 20.0,
+     "pire_dBm": 59.38275538476311,
+     "prx_dBm": -50.59850206565776,
+     "margen_dB": 27.40149793434224
+    },
+    {
+     "mod": "64QAM",
+     "capacidad_Mbps": 135.0,
+     "umbral_dBm": -75.0,
+     "ptx_dBm": 24.0,
+     "snr_dB": 23.0,
+     "pire_dBm": 59.38275538476311,
+     "prx_dBm": -50.59850206565776,
+     "margen_dB": 24.40149793434224
+    },
+    {
+     "mod": "128QAM",
+     "capacidad_Mbps": 157.5,
+     "umbral_dBm": -72.0,
+     "ptx_dBm": 23.0,
+     "snr_dB": 26.0,
+     "pire_dBm": 58.38275538476311,
+     "prx_dBm": -51.59850206565776,
+     "margen_dB": 20.40149793434224
+    },
+    {
+     "mod": "256QAM",
+     "capacidad_Mbps": 180.0,
+     "umbral_dBm": -69.0,
+     "ptx_dBm": 22.0,
+     "snr_dB": 29.0,
+     "pire_dBm": 57.38275538476311,
+     "prx_dBm": -52.59850206565776,
+     "margen_dB": 16.40149793434224
+    },
+    {
+     "mod": "512QAM",
+     "capacidad_Mbps": 200.0,
+     "umbral_dBm": -66.0,
+     "ptx_dBm": 21.0,
+     "snr_dB": 32.0,
+     "pire_dBm": 56.38275538476311,
+     "prx_dBm": -53.59850206565776,
+     "margen_dB": 12.401497934342238
+    },
+    {
+     "mod": "1024QAM",
+     "capacidad_Mbps": 222.5,
+     "umbral_dBm": -63.0,
+     "ptx_dBm": 20.0,
+     "snr_dB": 35.0,
+     "pire_dBm": 55.38275538476311,
+     "prx_dBm": -54.59850206565776,
+     "margen_dB": 8.401497934342238
+    },
+    {
+     "mod": "2048QAM",
+     "capacidad_Mbps": 245.0,
+     "umbral_dBm": -59.5,
+     "ptx_dBm": 18.0,
+     "snr_dB": 38.5,
+     "pire_dBm": 53.38275538476311,
+     "prx_dBm": -56.59850206565776,
+     "margen_dB": 2.9014979343422382
+    }
+   ],
+   "ref": {
+    "mod": "512QAM",
+    "capacidad_Mbps": 200.0,
+    "umbral_dBm": -66.0,
+    "ptx_dBm": 21.0,
+    "snr_dB": 32.0,
+    "pire_dBm": 56.38275538476311,
+    "prx_dBm": -53.59850206565776,
+    "margen_dB": 12.401497934342238
+   },
+   "max_cielo_despejado": {
+    "mod": "2048QAM",
+    "capacidad_Mbps": 245.0,
+    "umbral_dBm": -59.5,
+    "ptx_dBm": 18.0,
+    "snr_dB": 38.5,
+    "pire_dBm": 53.38275538476311,
+    "prx_dBm": -56.59850206565776,
+    "margen_dB": 2.9014979343422382
+   }
+  },
+  "interferencia": {
+   "escenarios": [
+    {
+     "nombre": "Enlace cocanal existente Chía-Cota (misma polarización)",
+     "distancia_km": 9.0,
+     "angulo_victima_deg": 20.0,
+     "G_tx_fuera_eje_dBi": -0.7544401063824253,
+     "G_fuera_eje_dBi": 5.321511110774935,
+     "pire_hacia_victima_dBm": 23.245559893617575,
+     "I_dBm": -105.74664623053073,
+     "N_dBm": -94.5284196865778,
+     "I_N_dB": -11.218226543952923,
+     "degradacion_umbral_dB": 0.3162659234865548,
+     "C_I_dB": 52.14814416487297,
+     "C_I_requerida_dB": 42.0,
+     "cumple": true,
+     "cocanal_I_N_dB": -11.218226543952923,
+     "mitigacion": "ninguna (cocanal)"
+    },
+    {
+     "nombre": "Enlace cocanal en Zipaquirá (polarización cruzada)",
+     "distancia_km": 5.0,
+     "angulo_victima_deg": 30.0,
+     "G_tx_fuera_eje_dBi": 8.444979525982433,
+     "G_fuera_eje_dBi": 0.9192296343829085,
+     "pire_hacia_victima_dBm": 32.44497952598243,
+     "I_dBm": -120.84405797249178,
+     "N_dBm": -94.5284196865778,
+     "I_N_dB": -26.315638285913977,
+     "degradacion_umbral_dB": 0.010132433509849758,
+     "C_I_dB": 67.24555590683403,
+     "C_I_requerida_dB": 42.0,
+     "cumple": true,
+     "cocanal_I_N_dB": -26.315638285913977,
+     "mitigacion": "ninguna (cocanal)"
+    },
+    {
+     "nombre": "Sobrealcance de un salto propio futuro en la misma frecuencia",
+     "distancia_km": 20.0,
+     "angulo_victima_deg": 10.0,
+     "G_tx_fuera_eje_dBi": 17.36271093733419,
+     "G_fuera_eje_dBi": 12.847261002374466,
+     "pire_hacia_victima_dBm": 41.362710937334185,
+     "I_dBm": -117.03949501970772,
+     "N_dBm": -94.5284196865778,
+     "I_N_dB": -22.51107533312991,
+     "degradacion_umbral_dB": 0.024291907374126596,
+     "C_I_dB": 63.44099295404995,
+     "C_I_requerida_dB": 42.0,
+     "cumple": true,
+     "cocanal_I_N_dB": 7.488924666870091,
+     "mitigacion": "polarización cruzada (XPD 30 dB)"
+    }
+   ],
+   "degradacion_max_dB": 0.3162659234865548,
+   "cumple": true
+  },
+  "disponibilidad": {
+   "lluvia": {
+    "k": 0.03265603372618038,
+    "alfa": 1.0900798964185587,
+    "gamma_dB_km": 4.675630454168355,
+    "r": 0.38948904224072495,
+    "d_eff_km": 10.905273003053507,
+    "A001_dB": 50.989026564096974
+   },
+   "ref": {
+    "margen_efectivo_dB": 12.085232010855684,
+    "p_lluvia_pct": 0.2550718857357366,
+    "p_multi_pct": 0.0016474602297646152,
+    "p_total_pct": 0.2567193459655012,
+    "disponibilidad_pct": 99.74328065403449,
+    "multitrayecto": {
+     "K": 0.00011885022274370189,
+     "eps_p_mrad": 2.6652455449810573,
+     "hL_m": 2583.4400000000187,
+     "p0_pct": 0.026627974995612456,
+     "pw_pct": 0.0016474602297646152
+    }
+   },
+   "curva_acm": [
+    {
+     "mod": "QPSK",
+     "capacidad_Mbps": 44.0,
+     "margen_efectivo_dB": 38.085232010855684,
+     "p_lluvia_pct": 0.021382368968179463,
+     "p_multi_pct": 4.1382329975973935e-06,
+     "p_total_pct": 0.02138650720117706,
+     "disponibilidad_pct": 99.97861349279883
+    },
+    {
+     "mod": "16QAM",
+     "capacidad_Mbps": 89.0,
+     "margen_efectivo_dB": 31.085232010855684,
+     "p_lluvia_pct": 0.03496576785307258,
+     "p_multi_pct": 2.074029548170931e-05,
+     "p_total_pct": 0.034986508148554286,
+     "disponibilidad_pct": 99.96501349185145
+    },
+    {
+     "mod": "32QAM",
+     "capacidad_Mbps": 111.0,
+     "margen_efectivo_dB": 27.085232010855684,
+     "p_lluvia_pct": 0.048049020739582456,
+     "p_multi_pct": 5.2097266806005104e-05,
+     "p_total_pct": 0.04810111800638846,
+     "disponibilidad_pct": 99.95189888199361
+    },
+    {
+     "mod": "64QAM",
+     "capacidad_Mbps": 135.0,
+     "margen_efectivo_dB": 24.085232010855684,
+     "p_lluvia_pct": 0.062443935297555195,
+     "p_multi_pct": 0.00010394771317090108,
+     "p_total_pct": 0.0625478830107261,
+     "disponibilidad_pct": 99.93745211698928
+    },
+    {
+     "mod": "128QAM",
+     "capacidad_Mbps": 157.5,
+     "margen_efectivo_dB": 20.085232010855684,
+     "p_lluvia_pct": 0.09232526569273294,
+     "p_multi_pct": 0.00026110485030043603,
+     "p_total_pct": 0.09258637054303338,
+     "disponibilidad_pct": 99.90741362945697
+    },
+    {
+     "mod": "256QAM",
+     "capacidad_Mbps": 180.0,
+     "margen_efectivo_dB": 16.085232010855684,
+     "p_lluvia_pct": 0.14583362381078563,
+     "p_multi_pct": 0.0006558657306710056,
+     "p_total_pct": 0.14648948954145663,
+     "disponibilidad_pct": 99.85351051045855
+    },
+    {
+     "mod": "512QAM",
+     "capacidad_Mbps": 200.0,
+     "margen_efectivo_dB": 12.085232010855684,
+     "p_lluvia_pct": 0.2550718857357366,
+     "p_multi_pct": 0.0016474602297646152,
+     "p_total_pct": 0.2567193459655012,
+     "disponibilidad_pct": 99.74328065403449
+    },
+    {
+     "mod": "1024QAM",
+     "capacidad_Mbps": 222.5,
+     "margen_efectivo_dB": 8.085232010855684,
+     "p_lluvia_pct": 0.5339306838685224,
+     "p_multi_pct": 0.004138232997597393,
+     "p_total_pct": 0.5380689168661198,
+     "disponibilidad_pct": 99.46193108313388
+    },
+    {
+     "mod": "2048QAM",
+     "capacidad_Mbps": 245.0,
+     "margen_efectivo_dB": 2.5852320108556834,
+     "p_lluvia_pct": 1.0,
+     "p_multi_pct": 0.014683004753157496,
+     "p_total_pct": 1.0146830047531574,
+     "disponibilidad_pct": 98.98531699524685
+    }
+   ],
+   "objetivo_pct": 0.010000000000005116,
+   "A_lluvia_margen_dB": 12.085232010855684,
+   "cumple": false,
+   "extrapolado": false
+  },
+  "motivos": [
+   "disponibilidad 99.7433 % < 99.99 %"
+  ],
+  "cumple": false,
+  "costo": 2.8280000000000003
+ },
+ "alternativas": [
+  {
+   "id": "D0",
+   "descripcion": "13 GHz, canal 28 MHz, pol. V, antenas de 0,6 m",
+   "cumple": false,
+   "costo": 2.8280000000000003,
+   "disponibilidad_pct": 99.74328065403449
+  },
+  {
+   "id": "A001",
+   "descripcion": "23 GHz, 28 MHz, pol. V, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.8280000000000003,
+   "disponibilidad_pct": 98.99311947221321
+  },
+  {
+   "id": "A002",
+   "descripcion": "23 GHz, 28 MHz, pol. H, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.8280000000000003,
+   "disponibilidad_pct": 98.99311947221321
+  },
+  {
+   "id": "A003",
+   "descripcion": "23 GHz, 28 MHz, pol. V, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.4280000000000004,
+   "disponibilidad_pct": 99.39987698808272
+  },
+  {
+   "id": "A004",
+   "descripcion": "23 GHz, 28 MHz, pol. H, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.4280000000000004,
+   "disponibilidad_pct": 99.14383745253039
+  },
+  {
+   "id": "A005",
+   "descripcion": "23 GHz, 28 MHz, pol. V, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.8280000000000003,
+   "disponibilidad_pct": 99.63743296497856
+  },
+  {
+   "id": "A006",
+   "descripcion": "23 GHz, 28 MHz, pol. H, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.8280000000000003,
+   "disponibilidad_pct": 99.47342909961401
+  },
+  {
+   "id": "A007",
+   "descripcion": "23 GHz, 28 MHz, pol. V, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.428,
+   "disponibilidad_pct": 99.79214193693414
+  },
+  {
+   "id": "A008",
+   "descripcion": "23 GHz, 28 MHz, pol. H, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.428,
+   "disponibilidad_pct": 99.69149671672346
+  },
+  {
+   "id": "A009",
+   "descripcion": "23 GHz, 56 MHz, pol. V, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.996,
+   "disponibilidad_pct": 99.63608985024786
+  },
+  {
+   "id": "A010",
+   "descripcion": "23 GHz, 56 MHz, pol. H, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.996,
+   "disponibilidad_pct": 99.47155082409776
+  },
+  {
+   "id": "A011",
+   "descripcion": "23 GHz, 56 MHz, pol. V, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.596,
+   "disponibilidad_pct": 99.78024402444312
+  },
+  {
+   "id": "A012",
+   "descripcion": "23 GHz, 56 MHz, pol. H, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.596,
+   "disponibilidad_pct": 99.6745785462567
+  },
+  {
+   "id": "A013",
+   "descripcion": "23 GHz, 56 MHz, pol. V, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.996,
+   "disponibilidad_pct": 99.84443409122234
+  },
+  {
+   "id": "A014",
+   "descripcion": "23 GHz, 56 MHz, pol. H, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.996,
+   "disponibilidad_pct": 99.7662651553163
+  },
+  {
+   "id": "A015",
+   "descripcion": "23 GHz, 56 MHz, pol. V, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.596,
+   "disponibilidad_pct": 99.8964239114534
+  },
+  {
+   "id": "A016",
+   "descripcion": "23 GHz, 56 MHz, pol. H, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.596,
+   "disponibilidad_pct": 99.84148360063543
+  },
+  {
+   "id": "A017",
+   "descripcion": "18 GHz, 28 MHz, pol. V, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.8280000000000003,
+   "disponibilidad_pct": 99.36952910644202
+  },
+  {
+   "id": "A018",
+   "descripcion": "18 GHz, 28 MHz, pol. H, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.8280000000000003,
+   "disponibilidad_pct": 99.10990656355617
+  },
+  {
+   "id": "A019",
+   "descripcion": "18 GHz, 28 MHz, pol. V, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.4280000000000004,
+   "disponibilidad_pct": 99.7310237022862
+  },
+  {
+   "id": "A020",
+   "descripcion": "18 GHz, 28 MHz, pol. H, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.4280000000000004,
+   "disponibilidad_pct": 99.60894395761369
+  },
+  {
+   "id": "A021",
+   "descripcion": "18 GHz, 28 MHz, pol. V, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.8280000000000003,
+   "disponibilidad_pct": 99.82914630725473
+  },
+  {
+   "id": "A022",
+   "descripcion": "18 GHz, 28 MHz, pol. H, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.8280000000000003,
+   "disponibilidad_pct": 99.74718521710503
+  },
+  {
+   "id": "A023",
+   "descripcion": "18 GHz, 28 MHz, pol. V, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.428,
+   "disponibilidad_pct": 99.89879132410283
+  },
+  {
+   "id": "A024",
+   "descripcion": "18 GHz, 28 MHz, pol. H, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.428,
+   "disponibilidad_pct": 99.84686479013037
+  },
+  {
+   "id": "A025",
+   "descripcion": "18 GHz, 56 MHz, pol. V, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.996,
+   "disponibilidad_pct": 99.82856411740336
+  },
+  {
+   "id": "A026",
+   "descripcion": "18 GHz, 56 MHz, pol. H, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.996,
+   "disponibilidad_pct": 99.74635865517236
+  },
+  {
+   "id": "A027",
+   "descripcion": "18 GHz, 56 MHz, pol. V, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.596,
+   "disponibilidad_pct": 99.89853171691563
+  },
+  {
+   "id": "A028",
+   "descripcion": "18 GHz, 56 MHz, pol. H, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.596,
+   "disponibilidad_pct": 99.84648959484515
+  },
+  {
+   "id": "A029",
+   "descripcion": "18 GHz, 56 MHz, pol. V, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.996,
+   "disponibilidad_pct": 99.92613901237303
+  },
+  {
+   "id": "A030",
+   "descripcion": "18 GHz, 56 MHz, pol. H, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.996,
+   "disponibilidad_pct": 99.88660336469309
+  },
+  {
+   "id": "A031",
+   "descripcion": "18 GHz, 56 MHz, pol. V, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.596,
+   "disponibilidad_pct": 99.94770086795015
+  },
+  {
+   "id": "A032",
+   "descripcion": "18 GHz, 56 MHz, pol. H, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.596,
+   "disponibilidad_pct": 99.91831988673903
+  },
+  {
+   "id": "A033",
+   "descripcion": "15 GHz, 28 MHz, pol. V, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.8280000000000003,
+   "disponibilidad_pct": 99.6808005647656
+  },
+  {
+   "id": "A034",
+   "descripcion": "15 GHz, 28 MHz, pol. H, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.8280000000000003,
+   "disponibilidad_pct": 99.56371835780934
+  },
+  {
+   "id": "A035",
+   "descripcion": "15 GHz, 28 MHz, pol. V, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.4280000000000004,
+   "disponibilidad_pct": 99.86182890225973
+  },
+  {
+   "id": "A036",
+   "descripcion": "15 GHz, 28 MHz, pol. H, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.4280000000000004,
+   "disponibilidad_pct": 99.80595870880046
+  },
+  {
+   "id": "A037",
+   "descripcion": "15 GHz, 28 MHz, pol. V, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.8280000000000003,
+   "disponibilidad_pct": 99.91267663034297
+  },
+  {
+   "id": "A038",
+   "descripcion": "15 GHz, 28 MHz, pol. H, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.8280000000000003,
+   "disponibilidad_pct": 99.8752950419238
+  },
+  {
+   "id": "A039",
+   "descripcion": "15 GHz, 28 MHz, pol. V, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.428,
+   "disponibilidad_pct": 99.949037850518
+  },
+  {
+   "id": "A040",
+   "descripcion": "15 GHz, 28 MHz, pol. H, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.428,
+   "disponibilidad_pct": 99.9256283489303
+  },
+  {
+   "id": "A041",
+   "descripcion": "15 GHz, 56 MHz, pol. V, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.996,
+   "disponibilidad_pct": 99.912374266467
+  },
+  {
+   "id": "A042",
+   "descripcion": "15 GHz, 56 MHz, pol. H, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.996,
+   "disponibilidad_pct": 99.87487972315361
+  },
+  {
+   "id": "A043",
+   "descripcion": "15 GHz, 56 MHz, pol. V, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.596,
+   "disponibilidad_pct": 99.94889158832207
+  },
+  {
+   "id": "A044",
+   "descripcion": "15 GHz, 56 MHz, pol. H, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.596,
+   "disponibilidad_pct": 99.92542397332046
+  },
+  {
+   "id": "A045",
+   "descripcion": "15 GHz, 56 MHz, pol. V, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.996,
+   "disponibilidad_pct": 99.96327923199729
+  },
+  {
+   "id": "A046",
+   "descripcion": "15 GHz, 56 MHz, pol. H, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.996,
+   "disponibilidad_pct": 99.94563360102967
+  },
+  {
+   "id": "A047",
+   "descripcion": "15 GHz, 56 MHz, pol. V, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.596,
+   "disponibilidad_pct": 99.97575851370468
+  },
+  {
+   "id": "A048",
+   "descripcion": "15 GHz, 56 MHz, pol. H, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.596,
+   "disponibilidad_pct": 99.96339077254662
+  },
+  {
+   "id": "A049",
+   "descripcion": "13 GHz, 28 MHz, pol. H, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.8280000000000003,
+   "disponibilidad_pct": 99.64507840462645
+  },
+  {
+   "id": "A050",
+   "descripcion": "13 GHz, 28 MHz, pol. V, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.4280000000000004,
+   "disponibilidad_pct": 99.89854997909214
+  },
+  {
+   "id": "A051",
+   "descripcion": "13 GHz, 28 MHz, pol. H, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.4280000000000004,
+   "disponibilidad_pct": 99.85526035787865
+  },
+  {
+   "id": "A052",
+   "descripcion": "13 GHz, 28 MHz, pol. V, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.8280000000000003,
+   "disponibilidad_pct": 99.93856380522507
+  },
+  {
+   "id": "A053",
+   "descripcion": "13 GHz, 28 MHz, pol. H, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.8280000000000003,
+   "disponibilidad_pct": 99.91062671074984
+  },
+  {
+   "id": "A054",
+   "descripcion": "13 GHz, 28 MHz, pol. V, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.428,
+   "disponibilidad_pct": 99.96577889347614
+  },
+  {
+   "id": "A055",
+   "descripcion": "13 GHz, 28 MHz, pol. H, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.428,
+   "disponibilidad_pct": 99.94894616387454
+  },
+  {
+   "id": "A056",
+   "descripcion": "11 GHz, 28 MHz, pol. V, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.8280000000000003,
+   "disponibilidad_pct": 99.84141713113075
+  },
+  {
+   "id": "A057",
+   "descripcion": "11 GHz, 28 MHz, pol. H, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.8280000000000003,
+   "disponibilidad_pct": 99.76276177515365
+  },
+  {
+   "id": "A058",
+   "descripcion": "11 GHz, 28 MHz, pol. V, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.4280000000000004,
+   "disponibilidad_pct": 99.94274358356428
+  },
+  {
+   "id": "A059",
+   "descripcion": "11 GHz, 28 MHz, pol. H, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.4280000000000004,
+   "disponibilidad_pct": 99.91047864539128
+  },
+  {
+   "id": "A060",
+   "descripcion": "11 GHz, 28 MHz, pol. V, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.8280000000000003,
+   "disponibilidad_pct": 99.96693463604836
+  },
+  {
+   "id": "A061",
+   "descripcion": "11 GHz, 28 MHz, pol. H, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.8280000000000003,
+   "disponibilidad_pct": 99.94684948183485
+  },
+  {
+   "id": "A062",
+   "descripcion": "11 GHz, 28 MHz, pol. V, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.428,
+   "disponibilidad_pct": 99.98259295571117
+  },
+  {
+   "id": "A063",
+   "descripcion": "11 GHz, 28 MHz, pol. H, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.428,
+   "disponibilidad_pct": 99.97098292158655
+  },
+  {
+   "id": "A064",
+   "descripcion": "11 GHz, 56 MHz, pol. V, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.996,
+   "disponibilidad_pct": 99.96679945515827
+  },
+  {
+   "id": "A065",
+   "descripcion": "11 GHz, 56 MHz, pol. H, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.996,
+   "disponibilidad_pct": 99.94664375488006
+  },
+  {
+   "id": "A066",
+   "descripcion": "11 GHz, 56 MHz, pol. V, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.596,
+   "disponibilidad_pct": 99.98253385171338
+  },
+  {
+   "id": "A067",
+   "descripcion": "11 GHz, 56 MHz, pol. H, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.596,
+   "disponibilidad_pct": 99.9708903631841
+  },
+  {
+   "id": "A068",
+   "descripcion": "11 GHz, 56 MHz, pol. V, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.996,
+   "disponibilidad_pct": 99.98822599805256
+  },
+  {
+   "id": "A069",
+   "descripcion": "11 GHz, 56 MHz, pol. H, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.996,
+   "disponibilidad_pct": 99.97988266913715
+  },
+  {
+   "id": "A070",
+   "descripcion": "11 GHz, 56 MHz, pol. V, antenas de 1.8 m",
+   "cumple": true,
+   "costo": 5.596,
+   "disponibilidad_pct": 99.99284454078226
+  },
+  {
+   "id": "A071",
+   "descripcion": "11 GHz, 56 MHz, pol. H, antenas de 1.8 m",
+   "cumple": false,
+   "costo": 5.596,
+   "disponibilidad_pct": 99.98734108538353
+  },
+  {
+   "id": "A072",
+   "descripcion": "8 GHz, 28 MHz, pol. V, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.8280000000000003,
+   "disponibilidad_pct": 99.95576504412489
+  },
+  {
+   "id": "A073",
+   "descripcion": "8 GHz, 28 MHz, pol. H, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.8280000000000003,
+   "disponibilidad_pct": 99.92981478775762
+  },
+  {
+   "id": "A074",
+   "descripcion": "8 GHz, 28 MHz, pol. V, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.4280000000000004,
+   "disponibilidad_pct": 99.98782338383243
+  },
+  {
+   "id": "A075",
+   "descripcion": "8 GHz, 28 MHz, pol. H, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.4280000000000004,
+   "disponibilidad_pct": 99.9791660579447
+  },
+  {
+   "id": "A076",
+   "descripcion": "8 GHz, 28 MHz, pol. V, antenas de 1.2 m",
+   "cumple": true,
+   "costo": 3.8280000000000003,
+   "disponibilidad_pct": 99.99328399164483
+  },
+  {
+   "id": "A077",
+   "descripcion": "8 GHz, 28 MHz, pol. H, antenas de 1.2 m",
+   "cumple": false,
+   "costo": 3.8280000000000003,
+   "disponibilidad_pct": 99.98799416658667
+  },
+  {
+   "id": "A078",
+   "descripcion": "8 GHz, 28 MHz, pol. V, antenas de 1.8 m",
+   "cumple": true,
+   "costo": 5.428,
+   "disponibilidad_pct": 99.99729192839932
+  },
+  {
+   "id": "A079",
+   "descripcion": "8 GHz, 28 MHz, pol. H, antenas de 1.8 m",
+   "cumple": true,
+   "costo": 5.428,
+   "disponibilidad_pct": 99.99475856658685
+  },
+  {
+   "id": "A080",
+   "descripcion": "7 GHz, 28 MHz, pol. V, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.8280000000000003,
+   "disponibilidad_pct": 99.97311752794958
+  },
+  {
+   "id": "A081",
+   "descripcion": "7 GHz, 28 MHz, pol. H, antenas de 0.6 m",
+   "cumple": false,
+   "costo": 2.8280000000000003,
+   "disponibilidad_pct": 99.95131677938484
+  },
+  {
+   "id": "A082",
+   "descripcion": "7 GHz, 28 MHz, pol. V, antenas de 0.9 m",
+   "cumple": true,
+   "costo": 3.4280000000000004,
+   "disponibilidad_pct": 99.99390865625716
+  },
+  {
+   "id": "A083",
+   "descripcion": "7 GHz, 28 MHz, pol. H, antenas de 0.9 m",
+   "cumple": false,
+   "costo": 3.4280000000000004,
+   "disponibilidad_pct": 99.98757679856416
+  },
+  {
+   "id": "A084",
+   "descripcion": "7 GHz, 28 MHz, pol. V, antenas de 1.2 m",
+   "cumple": true,
+   "costo": 3.8280000000000003,
+   "disponibilidad_pct": 99.99736404557537
+  },
+  {
+   "id": "A085",
+   "descripcion": "7 GHz, 28 MHz, pol. H, antenas de 1.2 m",
+   "cumple": true,
+   "costo": 3.8280000000000003,
+   "disponibilidad_pct": 99.99410192991229
+  },
+  {
+   "id": "A086",
+   "descripcion": "7 GHz, 28 MHz, pol. V, antenas de 1.8 m",
+   "cumple": true,
+   "costo": 5.428,
+   "disponibilidad_pct": 99.99894728895602
+  },
+  {
+   "id": "A087",
+   "descripcion": "7 GHz, 28 MHz, pol. H, antenas de 1.8 m",
+   "cumple": true,
+   "costo": 5.428,
+   "disponibilidad_pct": 99.99732642349802
+  }
+ ],
+ "verificaciones": [
+  {
+   "agente": "sitios",
+   "nombre": "Elevación válida sitio A",
+   "ok": true,
+   "detalle": "2562.4 m s. n. m.",
+   "critica": true
+  },
+  {
+   "agente": "sitios",
+   "nombre": "Elevación válida sitio B",
+   "ok": true,
+   "detalle": "2646.1 m s. n. m.",
+   "critica": true
+  },
+  {
+   "agente": "sitios",
+   "nombre": "Distancia cercana a la especificada",
+   "ok": true,
+   "detalle": "d = 28.00 km (objetivo 28.0 ± 2.0 km)",
+   "critica": true
+  },
+  {
+   "agente": "terreno",
+   "nombre": "Perfil sin huecos de datos",
+   "ok": true,
+   "detalle": "934 muestras cada 30 m",
+   "critica": true
+  },
+  {
+   "agente": "terreno",
+   "nombre": "Perfil coherente con elevaciones de los sitios",
+   "ok": true,
+   "detalle": "extremos 2562.4 / 2646.1 m",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Distancia (ley de cosenos)",
+   "ok": true,
+   "detalle": "27.999 km frente a 27.999 km",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "FSPL (Friis)",
+   "ok": true,
+   "detalle": "138.78 dB frente a 138.78 dB",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Ganancia de antena (área efectiva)",
+   "ok": true,
+   "detalle": "34.51 dBi frente a 34.51 dBi",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Ganancia en rango de catálogo",
+   "ok": true,
+   "detalle": "34.5 dBi",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Suma del presupuesto de potencia",
+   "ok": true,
+   "detalle": "Prx = -49.04 dBm",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Receptor no saturado",
+   "ok": true,
+   "detalle": "Prx = -49.0 dBm <= -20.0 dBm",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Atenuación por gases plausible",
+   "ok": true,
+   "detalle": "0.28 dB",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Radio de Fresnel (λ)",
+   "ok": true,
+   "detalle": "12.79 m frente a 12.79 m",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Despeje k=1.33 >= 1.0 F1",
+   "ok": true,
+   "detalle": "h/F1 mínimo = 1.02",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Despeje k=0.67 >= 0.3 F1",
+   "ok": true,
+   "detalle": "h/F1 mínimo = 0.47",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "P.838-3 a 10 GHz",
+   "ok": true,
+   "detalle": "kH=0.01217, αH=1.2571, kV=0.01129, αV=1.2156",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "P.838-3 a 20 GHz",
+   "ok": true,
+   "detalle": "kH=0.09164, αH=1.0568, kV=0.09611, αV=0.9847",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "P.838-3 a 8 GHz",
+   "ok": true,
+   "detalle": "kH=0.00412, αH=1.3905, kV=0.00345, αV=1.3797",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Inversión A(p) = margen",
+   "ok": true,
+   "detalle": "A(5.74e-03 %) = 16.81 dB, margen = 16.81 dB",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Lluvia monótona en p",
+   "ok": true,
+   "detalle": "A(0,001 %) > A(0,01 %) > A(0,1 %)",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Validez del modelo de lluvia",
+   "ok": true,
+   "detalle": "p dentro del rango 0,001-1 % de P.530",
+   "critica": false
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Capacidad >= requisito",
+   "ok": true,
+   "detalle": "200 Mbps con 512QAM",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Disponibilidad >= objetivo",
+   "ok": true,
+   "detalle": "99.99391 % (objetivo 99.99 %)",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Interferencia aceptable",
+   "ok": true,
+   "detalle": "degradación máx. 0.15 dB",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Alturas dentro de los límites de las estructuras",
+   "ok": true,
+   "detalle": "hA = 21 m, hB = 12 m",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Banda licenciada",
+   "ok": true,
+   "detalle": "7 GHz",
+   "critica": true
+  },
+  {
+   "agente": "revisor",
+   "nombre": "Decisión coherente (mínimo costo que cumple)",
+   "ok": true,
+   "detalle": "elegido A082 (costo 3.43); mejor según criterio A082 (costo 3.43); 9 de 88 variantes cumplen",
+   "critica": true
+  }
+ ],
+ "supuestos": [
+  [
+   "terreno",
+   "Clutter: 0.0-9.5 km: 15 m (urbano (Bogotá norte: edificaciones residenciales de 4-5 pisos hasta la Calle 200)); 9.5-40.0 km: 10 m (rural (arbolado, invernaderos y construcciones dispersas de la Sabana))"
+  ],
+  [
+   "frecuencia_equipos",
+   "Regla de planificación del diseño inicial: banda licenciada más alta cuyo alcance típico cubre la distancia, canal más estrecho que alcanza la capacidad, polarización vertical y antenas de 0,6 m"
+  ],
+  [
+   "presupuesto",
+   "Pérdidas de acople 0.5 dB por extremo (radio full-outdoor) y 1.0 dB de desalineación y radomos; atenuación por gases según ITU-R P.676 (aproximación) con ρ = 10.0 g/m³ y corrección de presión por altitud"
+  ],
+  [
+   "disponibilidad",
+   "R0,01 = 95.0 mm/h (ITU-R P.837-1, zona hidrometeorológica N (valor conservador para la Sabana de Bogotá; reemplazar por el mapa digital de ITU-R P.837-7 si está disponible))"
+  ],
+  [
+   "disponibilidad",
+   "dN1 = -250.0 (ITU-R P.453 (gradiente de refractividad del 1 % inferior, valor típico para la zona andina ecuatorial; supuesto))"
+  ],
+  [
+   "disponibilidad",
+   "La probabilidad de multitrayecto (mes más desfavorable) se suma a la indisponibilidad anual por lluvia como criterio conservador; la degradación del umbral por interferencia se descuenta del margen"
+  ],
+  [
+   "alternativas",
+   "Alternativas no cuantificadas en detalle: salto con repetidor (innecesario si alguna variante directa cumple) y diversidad de espacio (el multitrayecto no es dominante a esta distancia y altitud)"
+  ]
+ ],
+ "mensajes": [
+  {
+   "t": 0.0,
+   "de": "orquestador",
+   "para": "pizarra",
+   "tipo": "decision",
+   "contenido": "Plan: validar sitios -> perfil -> diseño inicial -> evaluación -> alternativas si no cumple -> revisión -> informe. Requisitos: 200 Mbps, 99.99 %, ~28 km"
+  },
+  {
+   "t": 0.0,
+   "de": "orquestador",
+   "para": "sitios",
+   "tipo": "solicitud",
+   "contenido": "ejecutar tarea"
+  },
+  {
+   "t": 0.269,
+   "de": "sitios",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "OK: d = 28.00 km, azimut A->B = 0.0°, elevaciones 2562 / 2646 m s. n. m."
+  },
+  {
+   "t": 0.269,
+   "de": "orquestador",
+   "para": "terreno",
+   "tipo": "solicitud",
+   "contenido": "ejecutar con tarea=perfil"
+  },
+  {
+   "t": 0.276,
+   "de": "terreno",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "OK: perfil de 934 puntos; cota máx. 2646 m, mín. 2542 m; origen: SRTM 1\" descargado/caché (N04W075)"
+  },
+  {
+   "t": 0.276,
+   "de": "orquestador",
+   "para": "frecuencia_equipos",
+   "tipo": "solicitud",
+   "contenido": "ejecutar tarea"
+  },
+  {
+   "t": 0.276,
+   "de": "frecuencia_equipos",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "OK: diseño inicial 13 GHz, canal 28 MHz, pol. V, antenas de 0,6 m (G = 35.9 dBi, modulación mínima 512QAM para 200 Mbps)"
+  },
+  {
+   "t": 0.276,
+   "de": "orquestador",
+   "para": "terreno",
+   "tipo": "solicitud",
+   "contenido": "ejecutar con tarea=alturas, f_GHz=13.0"
+  },
+  {
+   "t": 0.277,
+   "de": "terreno",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "OK: f = 13.0 GHz: hA = 21 m, hB = 12 m (h/F1 = 1.35 con k=4/3; 0.62 con k=2/3)"
+  },
+  {
+   "t": 0.277,
+   "de": "orquestador",
+   "para": "presupuesto",
+   "tipo": "solicitud",
+   "contenido": "ejecutar con diseno=D0"
+  },
+  {
+   "t": 0.277,
+   "de": "presupuesto",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "OK: D0: G = 35.9 dBi, FSPL = 143.7 dB, Prx(512QAM) = -53.6 dBm, margen = 12.4 dB"
+  },
+  {
+   "t": 0.277,
+   "de": "orquestador",
+   "para": "interferencias",
+   "tipo": "solicitud",
+   "contenido": "ejecutar con diseno=D0"
+  },
+  {
+   "t": 0.277,
+   "de": "interferencias",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "OK: D0: degradación máx. del umbral 0.32 dB; mitigación aplicada -> Sobrealcance de un salto propio futuro en la misma frecuencia: polarización cruzada (XPD 30 dB)"
+  },
+  {
+   "t": 0.277,
+   "de": "orquestador",
+   "para": "disponibilidad",
+   "tipo": "solicitud",
+   "contenido": "ejecutar con diseno=D0"
+  },
+  {
+   "t": 0.277,
+   "de": "disponibilidad",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "NO CUMPLE: D0: A0,01 = 51.0 dB, margen efectivo 12.1 dB, indisponibilidad 0.25672 % (lluvia 0.25507 %, multitrayecto 0.001647 %)"
+  },
+  {
+   "t": 0.277,
+   "de": "orquestador",
+   "para": "pizarra",
+   "tipo": "decision",
+   "contenido": "El diseño inicial D0 NO cumple (disponibilidad 99.7433 % < 99.99 %). Se solicitan alternativas"
+  },
+  {
+   "t": 0.277,
+   "de": "orquestador",
+   "para": "alternativas",
+   "tipo": "solicitud",
+   "contenido": "ejecutar con base=D0"
+  },
+  {
+   "t": 0.278,
+   "de": "alternativas",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "OK: 87 variantes generadas a partir de D0 (banda x canal x antena x polarización)"
+  },
+  {
+   "t": 0.278,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A001 (23 GHz, 28 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 98.9931 %, costo 2.83"
+  },
+  {
+   "t": 0.279,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A002 (23 GHz, 28 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 98.9931 %, costo 2.83"
+  },
+  {
+   "t": 0.279,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A003 (23 GHz, 28 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.3999 %, costo 3.43"
+  },
+  {
+   "t": 0.28,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A004 (23 GHz, 28 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.1438 %, costo 3.43"
+  },
+  {
+   "t": 0.281,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A005 (23 GHz, 28 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.6374 %, costo 3.83"
+  },
+  {
+   "t": 0.281,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A006 (23 GHz, 28 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.4734 %, costo 3.83"
+  },
+  {
+   "t": 0.282,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A007 (23 GHz, 28 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.7921 %, costo 5.43"
+  },
+  {
+   "t": 0.283,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A008 (23 GHz, 28 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.6915 %, costo 5.43"
+  },
+  {
+   "t": 0.283,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A009 (23 GHz, 56 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.6361 %, costo 3.00"
+  },
+  {
+   "t": 0.283,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A010 (23 GHz, 56 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.4716 %, costo 3.00"
+  },
+  {
+   "t": 0.284,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A011 (23 GHz, 56 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.7802 %, costo 3.60"
+  },
+  {
+   "t": 0.284,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A012 (23 GHz, 56 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.6746 %, costo 3.60"
+  },
+  {
+   "t": 0.285,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A013 (23 GHz, 56 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.8444 %, costo 4.00"
+  },
+  {
+   "t": 0.286,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A014 (23 GHz, 56 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.7663 %, costo 4.00"
+  },
+  {
+   "t": 0.286,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A015 (23 GHz, 56 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.8964 %, costo 5.60"
+  },
+  {
+   "t": 0.287,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A016 (23 GHz, 56 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.8415 %, costo 5.60"
+  },
+  {
+   "t": 0.288,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A017 (18 GHz, 28 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.3695 %, costo 2.83"
+  },
+  {
+   "t": 0.288,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A018 (18 GHz, 28 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.1099 %, costo 2.83"
+  },
+  {
+   "t": 0.289,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A019 (18 GHz, 28 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.7310 %, costo 3.43"
+  },
+  {
+   "t": 0.289,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A020 (18 GHz, 28 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.6089 %, costo 3.43"
+  },
+  {
+   "t": 0.29,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A021 (18 GHz, 28 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.8291 %, costo 3.83"
+  },
+  {
+   "t": 0.291,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A022 (18 GHz, 28 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.7472 %, costo 3.83"
+  },
+  {
+   "t": 0.291,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A023 (18 GHz, 28 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.8988 %, costo 5.43"
+  },
+  {
+   "t": 0.292,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A024 (18 GHz, 28 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.8469 %, costo 5.43"
+  },
+  {
+   "t": 0.293,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A025 (18 GHz, 56 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.8286 %, costo 3.00"
+  },
+  {
+   "t": 0.293,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A026 (18 GHz, 56 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.7464 %, costo 3.00"
+  },
+  {
+   "t": 0.294,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A027 (18 GHz, 56 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.8985 %, costo 3.60"
+  },
+  {
+   "t": 0.294,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A028 (18 GHz, 56 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.8465 %, costo 3.60"
+  },
+  {
+   "t": 0.295,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A029 (18 GHz, 56 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.9261 %, costo 4.00"
+  },
+  {
+   "t": 0.295,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A030 (18 GHz, 56 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.8866 %, costo 4.00"
+  },
+  {
+   "t": 0.296,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A031 (18 GHz, 56 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.9477 %, costo 5.60"
+  },
+  {
+   "t": 0.297,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A032 (18 GHz, 56 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.9183 %, costo 5.60"
+  },
+  {
+   "t": 0.298,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A033 (15 GHz, 28 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.6808 %, costo 2.83"
+  },
+  {
+   "t": 0.298,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A034 (15 GHz, 28 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.5637 %, costo 2.83"
+  },
+  {
+   "t": 0.299,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A035 (15 GHz, 28 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.8618 %, costo 3.43"
+  },
+  {
+   "t": 0.299,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A036 (15 GHz, 28 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.8060 %, costo 3.43"
+  },
+  {
+   "t": 0.3,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A037 (15 GHz, 28 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.9127 %, costo 3.83"
+  },
+  {
+   "t": 0.301,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A038 (15 GHz, 28 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.8753 %, costo 3.83"
+  },
+  {
+   "t": 0.301,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A039 (15 GHz, 28 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.9490 %, costo 5.43"
+  },
+  {
+   "t": 0.302,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A040 (15 GHz, 28 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.9256 %, costo 5.43"
+  },
+  {
+   "t": 0.303,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A041 (15 GHz, 56 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.9124 %, costo 3.00"
+  },
+  {
+   "t": 0.303,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A042 (15 GHz, 56 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.8749 %, costo 3.00"
+  },
+  {
+   "t": 0.304,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A043 (15 GHz, 56 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.9489 %, costo 3.60"
+  },
+  {
+   "t": 0.304,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A044 (15 GHz, 56 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.9254 %, costo 3.60"
+  },
+  {
+   "t": 0.305,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A045 (15 GHz, 56 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.9633 %, costo 4.00"
+  },
+  {
+   "t": 0.306,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A046 (15 GHz, 56 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.9456 %, costo 4.00"
+  },
+  {
+   "t": 0.306,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A047 (15 GHz, 56 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.9758 %, costo 5.60"
+  },
+  {
+   "t": 0.307,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A048 (15 GHz, 56 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.9634 %, costo 5.60"
+  },
+  {
+   "t": 0.308,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A049 (13 GHz, 28 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.6451 %, costo 2.83"
+  },
+  {
+   "t": 0.308,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A050 (13 GHz, 28 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.8985 %, costo 3.43"
+  },
+  {
+   "t": 0.309,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A051 (13 GHz, 28 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.8553 %, costo 3.43"
+  },
+  {
+   "t": 0.31,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A052 (13 GHz, 28 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.9386 %, costo 3.83"
+  },
+  {
+   "t": 0.31,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A053 (13 GHz, 28 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.9106 %, costo 3.83"
+  },
+  {
+   "t": 0.311,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A054 (13 GHz, 28 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.9658 %, costo 5.43"
+  },
+  {
+   "t": 0.312,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A055 (13 GHz, 28 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.9489 %, costo 5.43"
+  },
+  {
+   "t": 0.313,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A056 (11 GHz, 28 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.8414 %, costo 2.83"
+  },
+  {
+   "t": 0.313,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A057 (11 GHz, 28 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.7628 %, costo 2.83"
+  },
+  {
+   "t": 0.314,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A058 (11 GHz, 28 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.9427 %, costo 3.43"
+  },
+  {
+   "t": 0.314,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A059 (11 GHz, 28 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.9105 %, costo 3.43"
+  },
+  {
+   "t": 0.315,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A060 (11 GHz, 28 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.9669 %, costo 3.83"
+  },
+  {
+   "t": 0.316,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A061 (11 GHz, 28 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.9468 %, costo 3.83"
+  },
+  {
+   "t": 0.316,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A062 (11 GHz, 28 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.9826 %, costo 5.43"
+  },
+  {
+   "t": 0.317,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A063 (11 GHz, 28 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.9710 %, costo 5.43"
+  },
+  {
+   "t": 0.318,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A064 (11 GHz, 56 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.9668 %, costo 3.00"
+  },
+  {
+   "t": 0.318,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A065 (11 GHz, 56 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.9466 %, costo 3.00"
+  },
+  {
+   "t": 0.319,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A066 (11 GHz, 56 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.9825 %, costo 3.60"
+  },
+  {
+   "t": 0.319,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A067 (11 GHz, 56 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.9709 %, costo 3.60"
+  },
+  {
+   "t": 0.32,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A068 (11 GHz, 56 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.9882 %, costo 4.00"
+  },
+  {
+   "t": 0.321,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A069 (11 GHz, 56 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.9799 %, costo 4.00"
+  },
+  {
+   "t": 0.321,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A070 (11 GHz, 56 MHz, pol. V, antenas de 1.8 m): cumple; disponibilidad 99.9928 %, costo 5.60"
+  },
+  {
+   "t": 0.322,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A071 (11 GHz, 56 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.9873 %, costo 5.60"
+  },
+  {
+   "t": 0.323,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A072 (8 GHz, 28 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.9558 %, costo 2.83"
+  },
+  {
+   "t": 0.323,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A073 (8 GHz, 28 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.9298 %, costo 2.83"
+  },
+  {
+   "t": 0.324,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A074 (8 GHz, 28 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.9878 %, costo 3.43"
+  },
+  {
+   "t": 0.324,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A075 (8 GHz, 28 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.9792 %, costo 3.43"
+  },
+  {
+   "t": 0.325,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A076 (8 GHz, 28 MHz, pol. V, antenas de 1.2 m): cumple; disponibilidad 99.9933 %, costo 3.83"
+  },
+  {
+   "t": 0.325,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A077 (8 GHz, 28 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.9880 %, costo 3.83"
+  },
+  {
+   "t": 0.326,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A078 (8 GHz, 28 MHz, pol. V, antenas de 1.8 m): cumple; disponibilidad 99.9973 %, costo 5.43"
+  },
+  {
+   "t": 0.327,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A079 (8 GHz, 28 MHz, pol. H, antenas de 1.8 m): cumple; disponibilidad 99.9948 %, costo 5.43"
+  },
+  {
+   "t": 0.327,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A080 (7 GHz, 28 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.9731 %, costo 2.83"
+  },
+  {
+   "t": 0.328,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A081 (7 GHz, 28 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.9513 %, costo 2.83"
+  },
+  {
+   "t": 0.328,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A082 (7 GHz, 28 MHz, pol. V, antenas de 0.9 m): cumple; disponibilidad 99.9939 %, costo 3.43"
+  },
+  {
+   "t": 0.329,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A083 (7 GHz, 28 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.9876 %, costo 3.43"
+  },
+  {
+   "t": 0.329,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A084 (7 GHz, 28 MHz, pol. V, antenas de 1.2 m): cumple; disponibilidad 99.9974 %, costo 3.83"
+  },
+  {
+   "t": 0.33,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A085 (7 GHz, 28 MHz, pol. H, antenas de 1.2 m): cumple; disponibilidad 99.9941 %, costo 3.83"
+  },
+  {
+   "t": 0.33,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A086 (7 GHz, 28 MHz, pol. V, antenas de 1.8 m): cumple; disponibilidad 99.9989 %, costo 5.43"
+  },
+  {
+   "t": 0.331,
+   "de": "cadena de evaluación",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "A087 (7 GHz, 28 MHz, pol. H, antenas de 1.8 m): cumple; disponibilidad 99.9973 %, costo 5.43"
+  },
+  {
+   "t": 0.331,
+   "de": "orquestador",
+   "para": "pizarra",
+   "tipo": "decision",
+   "contenido": "9 de 88 diseños evaluados cumplen los requisitos"
+  },
+  {
+   "t": 0.331,
+   "de": "orquestador",
+   "para": "pizarra",
+   "tipo": "decision",
+   "contenido": "Candidato 1: A082 (7 GHz, 28 MHz, pol. V, antenas de 0.9 m), costo relativo 3.43. Se envía a revisión técnica"
+  },
+  {
+   "t": 0.331,
+   "de": "orquestador",
+   "para": "revisor",
+   "tipo": "solicitud",
+   "contenido": "ejecutar con diseno=A082, evaluados"
+  },
+  {
+   "t": 0.331,
+   "de": "revisor",
+   "para": "orquestador",
+   "tipo": "resultado",
+   "contenido": "OK: 22 comprobaciones, 0 fallos críticos"
+  },
+  {
+   "t": 0.331,
+   "de": "orquestador",
+   "para": "pizarra",
+   "tipo": "decision",
+   "contenido": "Diseño seleccionado: A082 (7 GHz, 28 MHz, pol. V, antenas de 0.9 m); hA = 21 m, hB = 12 m"
+  },
+  {
+   "t": 0.331,
+   "de": "orquestador",
+   "para": "informe",
+   "tipo": "solicitud",
+   "contenido": "ejecutar con orquestador"
+  }
+ ]
+}

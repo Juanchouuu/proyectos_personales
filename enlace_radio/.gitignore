@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+data/dem/*.hgt
+data/dem/*.hgt.gz
+salida/figuras/

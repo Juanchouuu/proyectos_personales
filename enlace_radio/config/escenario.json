@@ -1,0 +1,109 @@
+{
+  "proyecto": "Enlace de radio punto a punto Central Bogotá - Sede rural Cajicá/Zipaquirá",
+  "requisitos": {
+    "distancia_objetivo_km": 28.0,
+    "tolerancia_distancia_km": 2.0,
+    "capacidad_minima_mbps": 200.0,
+    "disponibilidad_objetivo_pct": 99.99
+  },
+  "sitios": {
+    "A": {
+      "nombre": "Central (Bogotá D.C., sector Calle 100 - Autopista Norte)",
+      "rol": "central",
+      "lat": 4.686,
+      "lon": -74.048,
+      "tipo_soporte": "Mástil sobre azotea de edificio de oficinas",
+      "altura_estructura_existente_m": 18.0,
+      "altura_max_mastil_m": 45.0,
+      "justificacion": "Sede principal de la empresa en el norte de Bogotá, con acceso a la red de transporte (fibra) y energía respaldada. Está en el borde norte de la ciudad, de cara a la Sabana, lo que libra los Cerros Orientales y deja el trayecto hacia el norte sobre terreno casi plano (2550-2650 m s. n. m.).",
+      "altura_min_m": 21.0
+    },
+    "B": {
+      "nombre": "Sede rural (zona rural entre Cajicá y Zipaquirá, Cundinamarca)",
+      "rol": "remoto",
+      "lat": 4.9378,
+      "lon": -74.048,
+      "tipo_soporte": "Torre autosoportada nueva en el predio de la sede",
+      "altura_estructura_existente_m": 0.0,
+      "altura_max_mastil_m": 60.0,
+      "justificacion": "Predio rural de la empresa en la Sabana norte, sin cobertura de fibra. Está a unos 28 km al norte de la central y sobre el mismo meridiano, de modo que el trayecto evita los cerros de Chía/Cota y los de Tabio/Tenjo (verificado con el barrido de rumbos del modelo SRTM).",
+      "altura_min_m": 12.0
+    }
+  },
+  "clima": {
+    "R001_mm_h": 95.0,
+    "fuente_R001": "ITU-R P.837-1, zona hidrometeorológica N (valor conservador para la Sabana de Bogotá; reemplazar por el mapa digital de ITU-R P.837-7 si está disponible)",
+    "dN1": -250.0,
+    "fuente_dN1": "ITU-R P.453 (gradiente de refractividad del 1 % inferior, valor típico para la zona andina ecuatorial; supuesto)",
+    "sa_m": 30.0,
+    "temperatura_C": 14.0,
+    "densidad_vapor_g_m3": 10.0,
+    "k_mediano": 1.3333,
+    "k_e_999": 0.6667
+  },
+  "criterios_despeje": {
+    "k_mediano": {
+      "k": 1.3333,
+      "fraccion_F1": 1.0
+    },
+    "k_minimo": {
+      "k": 0.6667,
+      "fraccion_F1": 0.3
+    },
+    "fuente": "ITU-R P.530-18 §2.2.2.1 (procedimiento de despeje para climas templados/tropicales con obstáculo extendido)"
+  },
+  "interferencia": {
+    "escenarios": [
+      {
+        "nombre": "Enlace cocanal existente Chía-Cota (misma polarización)",
+        "distancia_km": 9.0,
+        "ptx_interferente_dBm": 24.0,
+        "antena_interferente_m": 0.6,
+        "angulo_fuera_eje_interferente_deg": 35.0,
+        "angulo_fuera_eje_victima_deg": 20.0,
+        "discriminacion_polarizacion_dB": 0.0
+      },
+      {
+        "nombre": "Enlace cocanal en Zipaquirá (polarización cruzada)",
+        "distancia_km": 5.0,
+        "ptx_interferente_dBm": 24.0,
+        "antena_interferente_m": 0.6,
+        "angulo_fuera_eje_interferente_deg": 15.0,
+        "angulo_fuera_eje_victima_deg": 30.0,
+        "discriminacion_polarizacion_dB": 25.0
+      },
+      {
+        "nombre": "Sobrealcance de un salto propio futuro en la misma frecuencia",
+        "distancia_km": 20.0,
+        "ptx_interferente_dBm": 24.0,
+        "antena_interferente_m": 1.2,
+        "angulo_fuera_eje_interferente_deg": 5.0,
+        "angulo_fuera_eje_victima_deg": 10.0,
+        "discriminacion_polarizacion_dB": 0.0
+      }
+    ],
+    "fuente": "Escenarios hipotéticos de coordinación: no hay acceso a la base de asignaciones de la ANE. Diagramas de antena de ITU-R F.699 en ambos extremos y criterio I/N <= -6 dB (degradación <= 1 dB) de ITU-R F.758"
+  },
+  "dem": {
+    "fuente": "SRTM 1 arc-segundo (NASA/USGS), mosaico Terrain Tiles en AWS Open Data (formato Skadi .hgt)",
+    "url_plantilla": "https://elevation-tiles-prod.s3.amazonaws.com/skadi/{lat_dir}/{nombre}.hgt.gz",
+    "paso_muestreo_m": 30.0
+  },
+  "clutter": {
+    "tramos": [
+      {
+        "desde_km": 0.0,
+        "hasta_km": 9.5,
+        "altura_m": 15.0,
+        "tipo": "urbano (Bogotá norte: edificaciones residenciales de 4-5 pisos hasta la Calle 200)"
+      },
+      {
+        "desde_km": 9.5,
+        "hasta_km": 40.0,
+        "altura_m": 10.0,
+        "tipo": "rural (arbolado, invernaderos y construcciones dispersas de la Sabana)"
+      }
+    ],
+    "fuente": "Supuesto de diseño a partir de la cobertura del suelo observada en cartografía abierta (OpenStreetMap / imágenes satelitales); SRTM representa aproximadamente el terreno desnudo en zonas abiertas"
+  }
+}

@@ -1,0 +1,8 @@
+numpy>=1.24
+matplotlib>=3.7
+reportlab>=4.0
+requests>=2.28
+# Opcional: solo para el modo con agentes LLM (--motor claude)
+anthropic>=0.40
+# Pruebas
+pytest>=7

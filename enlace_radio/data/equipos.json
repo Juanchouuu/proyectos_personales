@@ -1,0 +1,213 @@
+{
+  "nota": "Catálogo de perfiles típicos compilado a partir de rangos habituales de hojas de datos de radios IP de microondas licenciadas full-outdoor (clase ETSI EN 302 217-2) y antenas parabólicas (ETSI EN 302 217-4, clase 3). Son valores representativos de la industria, no los de un fabricante concreto: antes de comprar, sustitúyalos por la hoja de datos del modelo elegido.",
+  "bandas": [
+    {
+      "banda": "7 GHz",
+      "f_GHz": 7.4,
+      "rango": "7.125-7.725 GHz",
+      "rec_canalizacion": "ITU-R F.385",
+      "anchos_MHz": [
+        28
+      ],
+      "licenciada": true,
+      "ajuste_ptx_dB": 0.0,
+      "dist_tipica_max_km": 60
+    },
+    {
+      "banda": "8 GHz",
+      "f_GHz": 8.1,
+      "rango": "7.725-8.500 GHz",
+      "rec_canalizacion": "ITU-R F.386",
+      "anchos_MHz": [
+        28
+      ],
+      "licenciada": true,
+      "ajuste_ptx_dB": 0.0,
+      "dist_tipica_max_km": 55
+    },
+    {
+      "banda": "11 GHz",
+      "f_GHz": 11.2,
+      "rango": "10.7-11.7 GHz",
+      "rec_canalizacion": "ITU-R F.387",
+      "anchos_MHz": [
+        28,
+        56
+      ],
+      "licenciada": true,
+      "ajuste_ptx_dB": -1.0,
+      "dist_tipica_max_km": 40
+    },
+    {
+      "banda": "13 GHz",
+      "f_GHz": 13.0,
+      "rango": "12.75-13.25 GHz",
+      "rec_canalizacion": "ITU-R F.497",
+      "anchos_MHz": [
+        28
+      ],
+      "licenciada": true,
+      "ajuste_ptx_dB": -2.0,
+      "dist_tipica_max_km": 30
+    },
+    {
+      "banda": "15 GHz",
+      "f_GHz": 14.9,
+      "rango": "14.4-15.35 GHz",
+      "rec_canalizacion": "ITU-R F.636",
+      "anchos_MHz": [
+        28,
+        56
+      ],
+      "licenciada": true,
+      "ajuste_ptx_dB": -2.0,
+      "dist_tipica_max_km": 25
+    },
+    {
+      "banda": "18 GHz",
+      "f_GHz": 18.7,
+      "rango": "17.7-19.7 GHz",
+      "rec_canalizacion": "ITU-R F.595",
+      "anchos_MHz": [
+        28,
+        56
+      ],
+      "licenciada": true,
+      "ajuste_ptx_dB": -4.0,
+      "dist_tipica_max_km": 15
+    },
+    {
+      "banda": "23 GHz",
+      "f_GHz": 23.0,
+      "rango": "21.2-23.6 GHz",
+      "rec_canalizacion": "ITU-R F.637",
+      "anchos_MHz": [
+        28,
+        56
+      ],
+      "licenciada": true,
+      "ajuste_ptx_dB": -5.0,
+      "dist_tipica_max_km": 10
+    }
+  ],
+  "radio": {
+    "modelo": "Radio IP de microondas full-outdoor licenciada (perfil típico, clase ETSI)",
+    "perdidas_acople_dB": 0.5,
+    "figura_ruido_dB": 5.0,
+    "consumo_W": 40,
+    "costo_relativo_por_par": 1.0,
+    "modulaciones_56MHz": [
+      {
+        "mod": "QPSK",
+        "capacidad_Mbps": 88,
+        "umbral_dBm": -84.0,
+        "ptx_dBm": 28.0,
+        "snr_dB": 10.5
+      },
+      {
+        "mod": "16QAM",
+        "capacidad_Mbps": 178,
+        "umbral_dBm": -78.0,
+        "ptx_dBm": 27.0,
+        "snr_dB": 17.0
+      },
+      {
+        "mod": "32QAM",
+        "capacidad_Mbps": 222,
+        "umbral_dBm": -75.0,
+        "ptx_dBm": 26.0,
+        "snr_dB": 20.0
+      },
+      {
+        "mod": "64QAM",
+        "capacidad_Mbps": 270,
+        "umbral_dBm": -72.0,
+        "ptx_dBm": 26.0,
+        "snr_dB": 23.0
+      },
+      {
+        "mod": "128QAM",
+        "capacidad_Mbps": 315,
+        "umbral_dBm": -69.0,
+        "ptx_dBm": 25.0,
+        "snr_dB": 26.0
+      },
+      {
+        "mod": "256QAM",
+        "capacidad_Mbps": 360,
+        "umbral_dBm": -66.0,
+        "ptx_dBm": 24.0,
+        "snr_dB": 29.0
+      },
+      {
+        "mod": "512QAM",
+        "capacidad_Mbps": 400,
+        "umbral_dBm": -63.0,
+        "ptx_dBm": 23.0,
+        "snr_dB": 32.0
+      },
+      {
+        "mod": "1024QAM",
+        "capacidad_Mbps": 445,
+        "umbral_dBm": -60.0,
+        "ptx_dBm": 22.0,
+        "snr_dB": 35.0
+      },
+      {
+        "mod": "2048QAM",
+        "capacidad_Mbps": 490,
+        "umbral_dBm": -56.5,
+        "ptx_dBm": 20.0,
+        "snr_dB": 38.5
+      }
+    ],
+    "regla_28MHz": "capacidad x 0.5 y umbral -3 dB respecto a 56 MHz (mitad del ancho de banda de ruido)",
+    "perdidas_varias_dB": 1.0,
+    "nota_perdidas_varias": "Desalineación de antenas y radomos (0,5 dB por extremo)",
+    "prx_max_dBm": -20.0,
+    "NFD_canal_adyacente_dB": 30.0,
+    "nota_NFD": "Discriminación de filtro neto (NFD) típica para canal adyacente de igual ancho (ETSI EN 302 217-2)"
+  },
+  "antenas": [
+    {
+      "diametro_m": 0.3,
+      "eficiencia": 0.55,
+      "relacion_FB_dB": 50,
+      "XPD_dB": 28,
+      "costo_relativo": 0.3
+    },
+    {
+      "diametro_m": 0.6,
+      "eficiencia": 0.58,
+      "relacion_FB_dB": 60,
+      "XPD_dB": 30,
+      "costo_relativo": 0.5
+    },
+    {
+      "diametro_m": 0.9,
+      "eficiencia": 0.58,
+      "relacion_FB_dB": 63,
+      "XPD_dB": 30,
+      "costo_relativo": 0.8
+    },
+    {
+      "diametro_m": 1.2,
+      "eficiencia": 0.58,
+      "relacion_FB_dB": 65,
+      "XPD_dB": 30,
+      "costo_relativo": 1.0
+    },
+    {
+      "diametro_m": 1.8,
+      "eficiencia": 0.58,
+      "relacion_FB_dB": 68,
+      "XPD_dB": 30,
+      "costo_relativo": 1.8
+    }
+  ],
+  "costos": {
+    "torre_por_metro": 0.02,
+    "espectro_por_MHz": 0.006,
+    "nota": "Costos relativos adimensionales (1.0 = un par de radios) usados solo para ordenar alternativas; no son precios."
+  }
+}
