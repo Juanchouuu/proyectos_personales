@@ -1536,7 +1536,7 @@
    "nombre": "Decisión coherente (mínimo costo que cumple)",
    "ok": true,
    "detalle": "elegido A082 (costo 3.43); mejor según criterio A082 (costo 3.43); 9 de 88 variantes cumplen",
-   "critica": true
+   "critica": false
   }
  ],
  "supuestos": [
@@ -1585,763 +1585,763 @@
    "contenido": "ejecutar tarea"
   },
   {
-   "t": 0.269,
+   "t": 0.334,
    "de": "sitios",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "OK: d = 28.00 km, azimut A->B = 0.0°, elevaciones 2562 / 2646 m s. n. m."
   },
   {
-   "t": 0.269,
+   "t": 0.334,
    "de": "orquestador",
    "para": "terreno",
    "tipo": "solicitud",
    "contenido": "ejecutar con tarea=perfil"
   },
   {
-   "t": 0.276,
+   "t": 0.35,
    "de": "terreno",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "OK: perfil de 934 puntos; cota máx. 2646 m, mín. 2542 m; origen: SRTM 1\" descargado/caché (N04W075)"
   },
   {
-   "t": 0.276,
+   "t": 0.35,
    "de": "orquestador",
    "para": "frecuencia_equipos",
    "tipo": "solicitud",
    "contenido": "ejecutar tarea"
   },
   {
-   "t": 0.276,
+   "t": 0.351,
    "de": "frecuencia_equipos",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "OK: diseño inicial 13 GHz, canal 28 MHz, pol. V, antenas de 0,6 m (G = 35.9 dBi, modulación mínima 512QAM para 200 Mbps)"
   },
   {
-   "t": 0.276,
+   "t": 0.351,
    "de": "orquestador",
    "para": "terreno",
    "tipo": "solicitud",
    "contenido": "ejecutar con tarea=alturas, f_GHz=13.0"
   },
   {
-   "t": 0.277,
+   "t": 0.351,
    "de": "terreno",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "OK: f = 13.0 GHz: hA = 21 m, hB = 12 m (h/F1 = 1.35 con k=4/3; 0.62 con k=2/3)"
   },
   {
-   "t": 0.277,
+   "t": 0.351,
    "de": "orquestador",
    "para": "presupuesto",
    "tipo": "solicitud",
    "contenido": "ejecutar con diseno=D0"
   },
   {
-   "t": 0.277,
+   "t": 0.351,
    "de": "presupuesto",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "OK: D0: G = 35.9 dBi, FSPL = 143.7 dB, Prx(512QAM) = -53.6 dBm, margen = 12.4 dB"
   },
   {
-   "t": 0.277,
+   "t": 0.351,
    "de": "orquestador",
    "para": "interferencias",
    "tipo": "solicitud",
    "contenido": "ejecutar con diseno=D0"
   },
   {
-   "t": 0.277,
+   "t": 0.351,
    "de": "interferencias",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "OK: D0: degradación máx. del umbral 0.32 dB; mitigación aplicada -> Sobrealcance de un salto propio futuro en la misma frecuencia: polarización cruzada (XPD 30 dB)"
   },
   {
-   "t": 0.277,
+   "t": 0.351,
    "de": "orquestador",
    "para": "disponibilidad",
    "tipo": "solicitud",
    "contenido": "ejecutar con diseno=D0"
   },
   {
-   "t": 0.277,
+   "t": 0.352,
    "de": "disponibilidad",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "NO CUMPLE: D0: A0,01 = 51.0 dB, margen efectivo 12.1 dB, indisponibilidad 0.25672 % (lluvia 0.25507 %, multitrayecto 0.001647 %)"
   },
   {
-   "t": 0.277,
+   "t": 0.352,
    "de": "orquestador",
    "para": "pizarra",
    "tipo": "decision",
    "contenido": "El diseño inicial D0 NO cumple (disponibilidad 99.7433 % < 99.99 %). Se solicitan alternativas"
   },
   {
-   "t": 0.277,
+   "t": 0.352,
    "de": "orquestador",
    "para": "alternativas",
    "tipo": "solicitud",
    "contenido": "ejecutar con base=D0"
   },
   {
-   "t": 0.278,
+   "t": 0.353,
    "de": "alternativas",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "OK: 87 variantes generadas a partir de D0 (banda x canal x antena x polarización)"
   },
   {
-   "t": 0.278,
+   "t": 0.354,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A001 (23 GHz, 28 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 98.9931 %, costo 2.83"
   },
   {
-   "t": 0.279,
+   "t": 0.355,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A002 (23 GHz, 28 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 98.9931 %, costo 2.83"
   },
   {
-   "t": 0.279,
+   "t": 0.356,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A003 (23 GHz, 28 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.3999 %, costo 3.43"
   },
   {
-   "t": 0.28,
+   "t": 0.357,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A004 (23 GHz, 28 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.1438 %, costo 3.43"
   },
   {
-   "t": 0.281,
+   "t": 0.358,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A005 (23 GHz, 28 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.6374 %, costo 3.83"
   },
   {
-   "t": 0.281,
+   "t": 0.36,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A006 (23 GHz, 28 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.4734 %, costo 3.83"
   },
   {
-   "t": 0.282,
+   "t": 0.361,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A007 (23 GHz, 28 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.7921 %, costo 5.43"
   },
   {
-   "t": 0.283,
+   "t": 0.362,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A008 (23 GHz, 28 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.6915 %, costo 5.43"
   },
   {
-   "t": 0.283,
+   "t": 0.363,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A009 (23 GHz, 56 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.6361 %, costo 3.00"
   },
   {
-   "t": 0.283,
+   "t": 0.363,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A010 (23 GHz, 56 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.4716 %, costo 3.00"
   },
   {
-   "t": 0.284,
+   "t": 0.364,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A011 (23 GHz, 56 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.7802 %, costo 3.60"
   },
   {
-   "t": 0.284,
+   "t": 0.365,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A012 (23 GHz, 56 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.6746 %, costo 3.60"
   },
   {
-   "t": 0.285,
+   "t": 0.366,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A013 (23 GHz, 56 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.8444 %, costo 4.00"
   },
   {
-   "t": 0.286,
+   "t": 0.366,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A014 (23 GHz, 56 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.7663 %, costo 4.00"
   },
   {
-   "t": 0.286,
+   "t": 0.367,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A015 (23 GHz, 56 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.8964 %, costo 5.60"
   },
   {
-   "t": 0.287,
+   "t": 0.368,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A016 (23 GHz, 56 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.8415 %, costo 5.60"
   },
   {
-   "t": 0.288,
+   "t": 0.369,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A017 (18 GHz, 28 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.3695 %, costo 2.83"
   },
   {
-   "t": 0.288,
+   "t": 0.369,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A018 (18 GHz, 28 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.1099 %, costo 2.83"
   },
   {
-   "t": 0.289,
+   "t": 0.37,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A019 (18 GHz, 28 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.7310 %, costo 3.43"
   },
   {
-   "t": 0.289,
+   "t": 0.37,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A020 (18 GHz, 28 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.6089 %, costo 3.43"
   },
   {
-   "t": 0.29,
+   "t": 0.371,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A021 (18 GHz, 28 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.8291 %, costo 3.83"
   },
   {
-   "t": 0.291,
+   "t": 0.372,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A022 (18 GHz, 28 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.7472 %, costo 3.83"
   },
   {
-   "t": 0.291,
+   "t": 0.372,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A023 (18 GHz, 28 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.8988 %, costo 5.43"
   },
   {
-   "t": 0.292,
+   "t": 0.373,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A024 (18 GHz, 28 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.8469 %, costo 5.43"
   },
   {
-   "t": 0.293,
+   "t": 0.373,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A025 (18 GHz, 56 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.8286 %, costo 3.00"
   },
   {
-   "t": 0.293,
+   "t": 0.374,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A026 (18 GHz, 56 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.7464 %, costo 3.00"
   },
   {
-   "t": 0.294,
+   "t": 0.375,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A027 (18 GHz, 56 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.8985 %, costo 3.60"
   },
   {
-   "t": 0.294,
+   "t": 0.375,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A028 (18 GHz, 56 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.8465 %, costo 3.60"
   },
   {
-   "t": 0.295,
+   "t": 0.376,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A029 (18 GHz, 56 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.9261 %, costo 4.00"
   },
   {
-   "t": 0.295,
+   "t": 0.376,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A030 (18 GHz, 56 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.8866 %, costo 4.00"
   },
   {
-   "t": 0.296,
+   "t": 0.377,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A031 (18 GHz, 56 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.9477 %, costo 5.60"
   },
   {
-   "t": 0.297,
+   "t": 0.378,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A032 (18 GHz, 56 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.9183 %, costo 5.60"
   },
   {
-   "t": 0.298,
+   "t": 0.379,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A033 (15 GHz, 28 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.6808 %, costo 2.83"
   },
   {
-   "t": 0.298,
+   "t": 0.379,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A034 (15 GHz, 28 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.5637 %, costo 2.83"
   },
   {
-   "t": 0.299,
+   "t": 0.381,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A035 (15 GHz, 28 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.8618 %, costo 3.43"
   },
   {
-   "t": 0.299,
+   "t": 0.382,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A036 (15 GHz, 28 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.8060 %, costo 3.43"
   },
   {
-   "t": 0.3,
+   "t": 0.383,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A037 (15 GHz, 28 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.9127 %, costo 3.83"
   },
   {
-   "t": 0.301,
+   "t": 0.384,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A038 (15 GHz, 28 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.8753 %, costo 3.83"
   },
   {
-   "t": 0.301,
+   "t": 0.385,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A039 (15 GHz, 28 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.9490 %, costo 5.43"
   },
   {
-   "t": 0.302,
+   "t": 0.386,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A040 (15 GHz, 28 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.9256 %, costo 5.43"
   },
   {
-   "t": 0.303,
+   "t": 0.387,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A041 (15 GHz, 56 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.9124 %, costo 3.00"
   },
   {
-   "t": 0.303,
+   "t": 0.388,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A042 (15 GHz, 56 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.8749 %, costo 3.00"
   },
   {
-   "t": 0.304,
+   "t": 0.39,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A043 (15 GHz, 56 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.9489 %, costo 3.60"
   },
   {
-   "t": 0.304,
+   "t": 0.391,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A044 (15 GHz, 56 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.9254 %, costo 3.60"
   },
   {
-   "t": 0.305,
+   "t": 0.392,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A045 (15 GHz, 56 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.9633 %, costo 4.00"
   },
   {
-   "t": 0.306,
+   "t": 0.393,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A046 (15 GHz, 56 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.9456 %, costo 4.00"
   },
   {
-   "t": 0.306,
+   "t": 0.394,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A047 (15 GHz, 56 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.9758 %, costo 5.60"
   },
   {
-   "t": 0.307,
+   "t": 0.395,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A048 (15 GHz, 56 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.9634 %, costo 5.60"
   },
   {
-   "t": 0.308,
+   "t": 0.396,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A049 (13 GHz, 28 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.6451 %, costo 2.83"
   },
   {
-   "t": 0.308,
+   "t": 0.398,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A050 (13 GHz, 28 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.8985 %, costo 3.43"
   },
   {
-   "t": 0.309,
+   "t": 0.399,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A051 (13 GHz, 28 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.8553 %, costo 3.43"
   },
   {
-   "t": 0.31,
+   "t": 0.4,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A052 (13 GHz, 28 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.9386 %, costo 3.83"
   },
   {
-   "t": 0.31,
+   "t": 0.401,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A053 (13 GHz, 28 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.9106 %, costo 3.83"
   },
   {
-   "t": 0.311,
+   "t": 0.402,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A054 (13 GHz, 28 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.9658 %, costo 5.43"
   },
   {
-   "t": 0.312,
+   "t": 0.403,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A055 (13 GHz, 28 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.9489 %, costo 5.43"
   },
   {
-   "t": 0.313,
+   "t": 0.403,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A056 (11 GHz, 28 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.8414 %, costo 2.83"
   },
   {
-   "t": 0.313,
+   "t": 0.404,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A057 (11 GHz, 28 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.7628 %, costo 2.83"
   },
   {
-   "t": 0.314,
+   "t": 0.405,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A058 (11 GHz, 28 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.9427 %, costo 3.43"
   },
   {
-   "t": 0.314,
+   "t": 0.406,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A059 (11 GHz, 28 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.9105 %, costo 3.43"
   },
   {
-   "t": 0.315,
+   "t": 0.406,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A060 (11 GHz, 28 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.9669 %, costo 3.83"
   },
   {
-   "t": 0.316,
+   "t": 0.407,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A061 (11 GHz, 28 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.9468 %, costo 3.83"
   },
   {
-   "t": 0.316,
+   "t": 0.408,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A062 (11 GHz, 28 MHz, pol. V, antenas de 1.8 m): no cumple; disponibilidad 99.9826 %, costo 5.43"
   },
   {
-   "t": 0.317,
+   "t": 0.408,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A063 (11 GHz, 28 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.9710 %, costo 5.43"
   },
   {
-   "t": 0.318,
+   "t": 0.409,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A064 (11 GHz, 56 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.9668 %, costo 3.00"
   },
   {
-   "t": 0.318,
+   "t": 0.409,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A065 (11 GHz, 56 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.9466 %, costo 3.00"
   },
   {
-   "t": 0.319,
+   "t": 0.41,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A066 (11 GHz, 56 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.9825 %, costo 3.60"
   },
   {
-   "t": 0.319,
+   "t": 0.411,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A067 (11 GHz, 56 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.9709 %, costo 3.60"
   },
   {
-   "t": 0.32,
+   "t": 0.411,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A068 (11 GHz, 56 MHz, pol. V, antenas de 1.2 m): no cumple; disponibilidad 99.9882 %, costo 4.00"
   },
   {
-   "t": 0.321,
+   "t": 0.412,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A069 (11 GHz, 56 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.9799 %, costo 4.00"
   },
   {
-   "t": 0.321,
+   "t": 0.413,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A070 (11 GHz, 56 MHz, pol. V, antenas de 1.8 m): cumple; disponibilidad 99.9928 %, costo 5.60"
   },
   {
-   "t": 0.322,
+   "t": 0.413,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A071 (11 GHz, 56 MHz, pol. H, antenas de 1.8 m): no cumple; disponibilidad 99.9873 %, costo 5.60"
   },
   {
-   "t": 0.323,
+   "t": 0.414,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A072 (8 GHz, 28 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.9558 %, costo 2.83"
   },
   {
-   "t": 0.323,
+   "t": 0.415,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A073 (8 GHz, 28 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.9298 %, costo 2.83"
   },
   {
-   "t": 0.324,
+   "t": 0.415,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A074 (8 GHz, 28 MHz, pol. V, antenas de 0.9 m): no cumple; disponibilidad 99.9878 %, costo 3.43"
   },
   {
-   "t": 0.324,
+   "t": 0.416,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A075 (8 GHz, 28 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.9792 %, costo 3.43"
   },
   {
-   "t": 0.325,
+   "t": 0.416,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A076 (8 GHz, 28 MHz, pol. V, antenas de 1.2 m): cumple; disponibilidad 99.9933 %, costo 3.83"
   },
   {
-   "t": 0.325,
+   "t": 0.417,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A077 (8 GHz, 28 MHz, pol. H, antenas de 1.2 m): no cumple; disponibilidad 99.9880 %, costo 3.83"
   },
   {
-   "t": 0.326,
+   "t": 0.417,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A078 (8 GHz, 28 MHz, pol. V, antenas de 1.8 m): cumple; disponibilidad 99.9973 %, costo 5.43"
   },
   {
-   "t": 0.327,
+   "t": 0.418,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A079 (8 GHz, 28 MHz, pol. H, antenas de 1.8 m): cumple; disponibilidad 99.9948 %, costo 5.43"
   },
   {
-   "t": 0.327,
+   "t": 0.419,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A080 (7 GHz, 28 MHz, pol. V, antenas de 0.6 m): no cumple; disponibilidad 99.9731 %, costo 2.83"
   },
   {
-   "t": 0.328,
+   "t": 0.419,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A081 (7 GHz, 28 MHz, pol. H, antenas de 0.6 m): no cumple; disponibilidad 99.9513 %, costo 2.83"
   },
   {
-   "t": 0.328,
+   "t": 0.42,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A082 (7 GHz, 28 MHz, pol. V, antenas de 0.9 m): cumple; disponibilidad 99.9939 %, costo 3.43"
   },
   {
-   "t": 0.329,
+   "t": 0.42,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A083 (7 GHz, 28 MHz, pol. H, antenas de 0.9 m): no cumple; disponibilidad 99.9876 %, costo 3.43"
   },
   {
-   "t": 0.329,
+   "t": 0.421,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A084 (7 GHz, 28 MHz, pol. V, antenas de 1.2 m): cumple; disponibilidad 99.9974 %, costo 3.83"
   },
   {
-   "t": 0.33,
+   "t": 0.421,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A085 (7 GHz, 28 MHz, pol. H, antenas de 1.2 m): cumple; disponibilidad 99.9941 %, costo 3.83"
   },
   {
-   "t": 0.33,
+   "t": 0.422,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A086 (7 GHz, 28 MHz, pol. V, antenas de 1.8 m): cumple; disponibilidad 99.9989 %, costo 5.43"
   },
   {
-   "t": 0.331,
+   "t": 0.422,
    "de": "cadena de evaluación",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "A087 (7 GHz, 28 MHz, pol. H, antenas de 1.8 m): cumple; disponibilidad 99.9973 %, costo 5.43"
   },
   {
-   "t": 0.331,
+   "t": 0.422,
    "de": "orquestador",
    "para": "pizarra",
    "tipo": "decision",
    "contenido": "9 de 88 diseños evaluados cumplen los requisitos"
   },
   {
-   "t": 0.331,
+   "t": 0.422,
    "de": "orquestador",
    "para": "pizarra",
    "tipo": "decision",
    "contenido": "Candidato 1: A082 (7 GHz, 28 MHz, pol. V, antenas de 0.9 m), costo relativo 3.43. Se envía a revisión técnica"
   },
   {
-   "t": 0.331,
+   "t": 0.422,
    "de": "orquestador",
    "para": "revisor",
    "tipo": "solicitud",
    "contenido": "ejecutar con diseno=A082, evaluados"
   },
   {
-   "t": 0.331,
+   "t": 0.423,
    "de": "revisor",
    "para": "orquestador",
    "tipo": "resultado",
    "contenido": "OK: 22 comprobaciones, 0 fallos críticos"
   },
   {
-   "t": 0.331,
+   "t": 0.423,
    "de": "orquestador",
    "para": "pizarra",
    "tipo": "decision",
    "contenido": "Diseño seleccionado: A082 (7 GHz, 28 MHz, pol. V, antenas de 0.9 m); hA = 21 m, hB = 12 m"
   },
   {
-   "t": 0.331,
+   "t": 0.423,
    "de": "orquestador",
    "para": "informe",
    "tipo": "solicitud",

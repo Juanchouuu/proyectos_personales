@@ -118,7 +118,7 @@ class AgenteRevisor(Agente):
             mejor = min(ok_ev, key=lambda e: (round(e["costo"], 6), -e["disponibilidad"]["ref"]["margen_efectivo_dB"]))
             v("Decisión coherente (mínimo costo que cumple)", mejor["id"] == diseno["id"],
               f"elegido {diseno['id']} (costo {diseno['costo']:.2f}); mejor según criterio {mejor['id']} "
-              f"(costo {mejor['costo']:.2f}); {len(ok_ev)} de {len(evaluados)} variantes cumplen")
+              f"(costo {mejor['costo']:.2f}); {len(ok_ev)} de {len(evaluados)} variantes cumplen", critica=False)
 
         nuevas = pz.verificaciones[n0:]
         fallos = [x for x in nuevas if not x.ok and x.critica]
