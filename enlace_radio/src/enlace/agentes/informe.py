@@ -309,7 +309,7 @@ class AgenteInforme(Agente):
                 continue
             vistos.add(clave)
             filas.append([v.agente, v.nombre, v.detalle, "OK" if v.ok else ("FALLO" if v.critica else "AVISO")])
-            rs[len(filas) - 1] = "verde" if v.ok else "rojo"
+            rs[len(filas) - 1] = "verde" if v.ok else ("rojo" if v.critica else "amarillo")
         doc.tabla(filas, "Registro de verificaciones.", [2.3, 5.0, 7.3, 2.0], rs)
 
         # 11. Supuestos y fuentes
@@ -349,7 +349,7 @@ class AgenteInforme(Agente):
         for m in pz.mensajes:
             filas.append([f"{m.t:.2f}", m.de, m.para, m.tipo, m.contenido])
         doc.tabla(filas, "Mensajes intercambiados durante la ejecución (las evaluaciones de alternativas se resumen en "
-                  "una línea por variante).", [1.1, 2.4, 2.6, 1.7, 8.8])
+                  "una línea por variante).", [1.0, 2.4, 2.5, 2.0, 8.7])
         doc.anexo("B", "Datos de entrada y reproducibilidad")
         doc.p("Todos los datos de entrada están en <b>config/escenario.json</b> (sitios, requisitos, clima, clutter, "
               "interferencias) y <b>data/equipos.json</b> (catálogo). El perfil extraído se guarda en "

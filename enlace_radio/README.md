@@ -39,7 +39,7 @@ python generar_informe.py --sin-red
 python -m pytest -q
 ```
 
-La primera ejecución descarga la tesela SRTM `N04W075` (~16 MB) en `data/dem/`. Las siguientes la reutilizan.
+La primera ejecución descarga las teselas SRTM de la zona (hasta 4, de ~16 MB cada una, para el perfil y el mapa) en `data/dem/`. Las siguientes la reutilizan.
 Cada ejecución regenera `salida/informe_enlace_radio.pdf`, `salida/resultados.json` y las figuras de `salida/figuras/`.
 
 ## Cambiar el escenario

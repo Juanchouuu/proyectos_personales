@@ -99,6 +99,13 @@ class AgenteRevisor(Agente):
           "p dentro del rango 0,001-1 % de P.530" if not disp["extrapolado"]
           else "p < 0,001 %: extrapolación (resultado holgado, no crítico)", critica=False)
 
+        # 8b. sensibilidad: ¿sigue cumpliendo con un 20 % más de intensidad de lluvia? (aviso, no crítico)
+        R2 = self.ctx.config["clima"]["R001_mm_h"] * 1.2
+        A2 = itur.atenuacion_lluvia_001(d, f, R2, diseno["pol"])["A001_dB"]
+        p2 = itur.porcentaje_excedido_lluvia(A2, disp["ref"]["margen_efectivo_dB"], f) + disp["ref"]["p_multi_pct"]
+        v("Sensibilidad: R0,01 +20 %", p2 <= disp["objetivo_pct"],
+          f"con R0,01 = {R2:.0f} mm/h la disponibilidad sería {100 - p2:.4f} %", critica=False)
+
         # 9. requisitos
         v("Capacidad >= requisito", ref["capacidad_Mbps"] >= req["capacidad_minima_mbps"],
           f"{ref['capacidad_Mbps']:.0f} Mbps con {ref['mod']}")

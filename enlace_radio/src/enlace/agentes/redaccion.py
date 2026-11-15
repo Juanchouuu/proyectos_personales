@@ -12,6 +12,14 @@ def n(x: float, dec: int = 1) -> str:
     return f"{x:,.{dec}f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
 
+def _disp_con_lluvia(e: dict, d: float, factor: float, R001: float) -> float:
+    from ..herramientas import itur
+
+    A = itur.atenuacion_lluvia_001(d, e["f_GHz"], R001 * factor, e["pol"])["A001_dB"]
+    ref = e["disponibilidad"]["ref"]
+    return 100 - itur.porcentaje_excedido_lluvia(A, ref["margen_efectivo_dB"], e["f_GHz"]) - ref["p_multi_pct"]
+
+
 def hechos(pz, ctx) -> dict:
     f = pz.leer("diseno_final")
     i = pz.leer("diseno_inicial")
@@ -43,7 +51,25 @@ def hechos(pz, ctx) -> dict:
         "disp": dsp["ref"]["disponibilidad_pct"], "costo": f["costo"], "n_eval": len(ev),
         "n_cumplen": sum(1 for e in ev if e["cumple"]), "R001": ctx.config["clima"]["R001_mm_h"],
         "altas_cumplen": [e["descripcion"] for e in ev if e["cumple"] and e["f_GHz"] > 10],
+        **_robustez(f, ev, pz.leer("distancia_km"), ctx),
     }
+
+
+def _robustez(f: dict, ev: list, d: float, ctx) -> dict:
+    """Disponibilidad con un 20 % más de lluvia y la variante más barata que la resiste."""
+    R = ctx.config["clima"]["R001_mm_h"]
+    obj = ctx.config["requisitos"]["disponibilidad_objetivo_pct"]
+    disp_fin = _disp_con_lluvia(f, d, 1.2, R)
+    robusta = None
+    for e in sorted([e for e in ev if e["cumple"]], key=lambda e: e["costo"]):
+        if _disp_con_lluvia(e, d, 1.2, R) >= obj:
+            robusta = e
+            break
+    return {"disp_lluvia_120": disp_fin, "robusto": disp_fin >= obj,
+            "robusta_id": robusta["id"] if robusta else None, "robusta_desc": robusta["descripcion"] if robusta else None,
+            "robusta_disp": robusta["disponibilidad"]["ref"]["disponibilidad_pct"] if robusta else None,
+            "robusta_disp_120": _disp_con_lluvia(robusta, d, 1.2, R) if robusta else None,
+            "robusta_costo": robusta["costo"] if robusta else None}
 
 
 def redactar_plantilla(h: dict) -> dict[str, str]:
@@ -108,7 +134,17 @@ def redactar_plantilla(h: dict) -> dict[str, str]:
         "El revisor independiente recalculó distancias, pérdidas, Fresnel, coeficientes ITU-R y el presupuesto sin "
         "encontrar discrepancias críticas.",
     ]
-    t["recomendaciones"] = [
+    if h["robusto"]:
+        sensib = (f"El diseño mantiene el objetivo aunque R0,01 sea un 20 % mayor ({n(h['disp_lluvia_120'], 4)} %).")
+    elif h["robusta_id"]:
+        sensib = (f"<b>Sensibilidad:</b> con un 20 % más de intensidad de lluvia, la disponibilidad bajaría a "
+                  f"{n(h['disp_lluvia_120'], 4)} %. Si el valor de P.837-7 en el sitio resulta mayor que el supuesto, "
+                  f"conviene pasar a {h['robusta_id']} ({h['robusta_desc']}, costo relativo {n(h['robusta_costo'], 2)}), "
+                  f"que da {n(h['robusta_disp'], 4)} % y conserva {n(h['robusta_disp_120'], 4)} % en ese caso.")
+    else:
+        sensib = (f"<b>Sensibilidad:</b> con un 20 % más de lluvia la disponibilidad bajaría a "
+                  f"{n(h['disp_lluvia_120'], 4)} % y ninguna variante directa lo compensa.")
+    t["recomendaciones"] = [sensib,
         "Solicitar a la ANE la asignación del canal y la polarización indicados y confirmar la ausencia de enlaces "
         "cocanal cercanos (los escenarios de interferencia usados son hipotéticos).",
         "Hacer un estudio de sitio (site survey) con visita a ambos puntos: medir alturas reales de edificaciones y árboles "

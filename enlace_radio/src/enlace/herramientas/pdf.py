@@ -32,6 +32,7 @@ AZUL = colors.HexColor("#1f4e79")
 GRIS = colors.HexColor("#f2f2f2")
 VERDE = colors.HexColor("#d5f0dc")
 ROJO = colors.HexColor("#f8d7da")
+AMARILLO = colors.HexColor("#fff3cd")
 
 _base = getSampleStyleSheet()
 EST = {
@@ -155,7 +156,7 @@ class Constructor:
             if i % 2 == 0:
                 est.append(("BACKGROUND", (0, i), (-1, i), GRIS))
         for i, color in (resaltar or {}).items():
-            est.append(("BACKGROUND", (0, i), (-1, i), VERDE if color == "verde" else ROJO))
+            est.append(("BACKGROUND", (0, i), (-1, i), {"verde": VERDE, "amarillo": AMARILLO}.get(color, ROJO)))
         t.setStyle(TableStyle(est))
         pie = f"<b>Tabla {self.n_tab}.</b> {titulo}" + (f" Fuente: {fuente}" if fuente else "")
         self.e += [Paragraph(pie, EST["pie"]), t, Spacer(1, 8)]
