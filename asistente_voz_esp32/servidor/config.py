@@ -42,7 +42,7 @@ class Config:
     token_dispositivo: str
 
     # Proveedores: stt = whisper_local | groq | falso
-    #              llm = ollama | groq | falso
+    #              llm = ollama | groq | deepseek | falso
     #              tts = edge | gtts | falso
     stt_proveedor: str
     llm_proveedor: str
@@ -54,6 +54,9 @@ class Config:
     groq_api_key: str
     groq_modelo_llm: str
     groq_modelo_stt: str
+    deepseek_api_key: str
+    deepseek_url: str
+    deepseek_modelo: str
     edge_voz: str
 
     # Control de recursos
@@ -83,6 +86,9 @@ class Config:
             groq_api_key=_env("GROQ_API_KEY", ""),
             groq_modelo_llm=_env("GROQ_MODELO_LLM", "llama-3.1-8b-instant"),
             groq_modelo_stt=_env("GROQ_MODELO_STT", "whisper-large-v3-turbo"),
+            deepseek_api_key=_env("DEEPSEEK_API_KEY", ""),
+            deepseek_url=_env("DEEPSEEK_URL", "https://api.deepseek.com"),
+            deepseek_modelo=_env("DEEPSEEK_MODELO", "deepseek-chat"),
             edge_voz=_env("EDGE_VOZ", "es-CO-SalomeNeural"),
             max_segundos_grabacion=float(_env("MAX_SEGUNDOS_GRABACION", "10")),
             llm_max_tokens=int(_env("LLM_MAX_TOKENS", "200")),

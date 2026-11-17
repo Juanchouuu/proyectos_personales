@@ -49,7 +49,7 @@ Todos son gratuitos. Se eligen en `.env`.
 | Etapa | Opción por defecto (sin clave) | Alternativa |
 |---|---|---|
 | STT | `whisper_local`: Whisper en tu PC. La primera vez descarga el modelo (`base` ≈ 150 MB) | `groq` (más rápido; necesita `GROQ_API_KEY` gratis) |
-| LLM | `ollama`: modelo local | `groq` (no necesitas instalar nada, pero pide `GROQ_API_KEY` gratis) |
+| LLM | `ollama`: modelo local | `groq` (no necesitas instalar nada, pero pide `GROQ_API_KEY` gratis) o `deepseek` (de pago) |
 | TTS | `edge`: voces neuronales en español (necesita internet) | `gtts` |
 
 **Ollama** (LLM local): instálalo desde <https://ollama.com> y descarga el modelo:
@@ -60,6 +60,18 @@ ollama pull llama3.2:3b
 
 **Groq**, si tu PC es lento o no quieres instalar Ollama: crea una clave gratuita en
 <https://console.groq.com>, ponla en `GROQ_API_KEY` y usa `LLM_PROVEEDOR=groq` y, si quieres, `STT_PROVEEDOR=groq`.
+
+**DeepSeek** (API oficial, de pago pero económica): crea una clave en <https://platform.deepseek.com>
+y en `.env` pon:
+
+```ini
+LLM_PROVEEDOR=deepseek
+DEEPSEEK_API_KEY=sk-...          # solo en .env, nunca en el código
+DEEPSEEK_MODELO=deepseek-chat    # recomendado para voz; deepseek-reasoner razona pero tarda más
+```
+
+Con `deepseek-reasoner` solo se lee la respuesta final, no el razonamiento. Lo mismo pasa con
+`deepseek-r1` en Ollama: su bloque `<think>` se elimina antes de convertir el texto en voz.
 
 Para probar sin internet ni modelos, usa `falso` en las tres etapas: devuelven respuestas fijas.
 

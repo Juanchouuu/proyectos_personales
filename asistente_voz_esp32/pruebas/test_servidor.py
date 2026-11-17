@@ -152,3 +152,53 @@ def test_limitar_texto():
     assert limitar_texto(texto, 40) == "Primera frase. Segunda frase bastante..."
     assert limitar_texto("**Hola** mundo", 100) == "Hola mundo"
     assert len(limitar_texto("palabra " * 100, 50)) <= 53
+
+
+# ---------------------------------------------------------------- DeepSeek (API simulada)
+
+def _api_deepseek_simulada(peticiones: list):
+    import httpx
+
+    def responder(request: httpx.Request) -> httpx.Response:
+        peticiones.append(request)
+        return httpx.Response(200, json={"choices": [{"message": {
+            "role": "assistant",
+            "content": "La capital de Colombia es Bogotá.",
+            "reasoning_content": "esto no se debe leer",
+        }}]})
+
+    return httpx.MockTransport(responder)
+
+
+def test_deepseek_en_el_flujo_completo(cfg, monkeypatch):
+    from servidor.proveedores import LLMDeepSeek
+
+    peticiones = []
+    monkeypatch.setattr(LLMDeepSeek, "transporte", _api_deepseek_simulada(peticiones))
+    cfg_ds = replace(cfg, llm_proveedor="deepseek", deepseek_api_key="sk-prueba", deepseek_modelo="deepseek-chat")
+    with TestClient(crear_app(cfg_ds)) as c:
+        assert c.get("/api/salud").json()["proveedores"]["llm"] == "deepseek:deepseek-chat"
+        r = c.post("/api/consulta", content=wav_tono(1), headers=AUTH)
+
+    assert r.status_code == 200
+    assert unquote(r.headers["X-Respuesta"]) == "La capital de Colombia es Bogotá."
+    peticion = peticiones[0]
+    assert str(peticion.url) == "https://api.deepseek.com/chat/completions"
+    assert peticion.headers["Authorization"] == "Bearer sk-prueba"
+    cuerpo = json.loads(peticion.content)
+    assert cuerpo["model"] == "deepseek-chat"
+    assert cuerpo["max_tokens"] == cfg.llm_max_tokens
+    assert cuerpo["messages"][0]["role"] == "system"
+
+
+def test_deepseek_sin_clave_da_error_de_voz(cfg):
+    with TestClient(crear_app(replace(cfg, llm_proveedor="deepseek", deepseek_api_key=""))) as c:
+        r = c.post("/api/consulta", content=wav_tono(1), headers=AUTH)
+    assert r.status_code == 502
+    assert "DEEPSEEK_API_KEY" in unquote(r.headers["X-Error"])
+    assert leer_wav(r.content).duracion_s > 0
+
+
+def test_se_quita_el_razonamiento_think():
+    texto = "<think>\nEl usuario pregunta por la capital...\n</think>\n\nEs Bogotá."
+    assert limitar_texto(texto, 400) == "Es Bogotá."

@@ -7,6 +7,7 @@ Todos los proveedores por defecto son gratuitos:
        groq          : Whisper en la nube de Groq (clave gratuita).
 - LLM  ollama        : modelo local con Ollama (sin clave).
        groq          : Llama en la nube de Groq (clave gratuita).
+       deepseek      : API de DeepSeek (clave de pago, económica).
 - TTS  edge          : voces neuronales de Microsoft Edge (sin clave).
        gtts          : Google Translate TTS (sin clave).
 - falso: respuestas fijas para probar sin internet ni modelos.
@@ -114,25 +115,48 @@ class LLMOllama:
             return r.json()["message"]["content"].strip()
 
 
-class LLMGroq:
-    def __init__(self, cfg: Config):
+class LLMCompatibleOpenAI:
+    """Cualquier API con el formato /chat/completions de OpenAI (Groq, DeepSeek, ...)."""
+
+    transporte: httpx.AsyncBaseTransport | None = None  # las pruebas lo reemplazan
+
+    def __init__(self, cfg: Config, proveedor: str, url: str, clave: str, variable_clave: str, modelo: str):
         self.cfg = cfg
-        self.nombre = f"groq:{cfg.groq_modelo_llm}"
+        self.nombre = f"{proveedor}:{modelo}"
+        self.url = url.rstrip("/")
+        self.clave = clave
+        self.variable_clave = variable_clave
+        self.modelo = modelo
 
     async def responder(self, mensajes: list[dict]) -> str:
-        async with httpx.AsyncClient(timeout=self.cfg.timeout_servicios_s) as cliente:
+        if not self.clave:
+            raise RuntimeError(f"Falta {self.variable_clave} en el archivo .env")
+        async with httpx.AsyncClient(timeout=self.cfg.timeout_servicios_s, transport=self.transporte) as cliente:
             r = await cliente.post(
-                f"{GROQ_URL}/chat/completions",
-                headers={"Authorization": f"Bearer {_clave_groq(self.cfg)}"},
+                f"{self.url}/chat/completions",
+                headers={"Authorization": f"Bearer {self.clave}"},
                 json={
-                    "model": self.cfg.groq_modelo_llm,
+                    "model": self.modelo,
                     "messages": mensajes,
                     "max_tokens": self.cfg.llm_max_tokens,
                     "temperature": 0.6,
+                    "stream": False,
                 },
             )
             r.raise_for_status()
+            # deepseek-reasoner devuelve su razonamiento aparte (reasoning_content); solo se usa content
             return r.json()["choices"][0]["message"]["content"].strip()
+
+
+class LLMGroq(LLMCompatibleOpenAI):
+    def __init__(self, cfg: Config):
+        super().__init__(cfg, "groq", GROQ_URL, cfg.groq_api_key, "GROQ_API_KEY", cfg.groq_modelo_llm)
+
+
+class LLMDeepSeek(LLMCompatibleOpenAI):
+    def __init__(self, cfg: Config):
+        super().__init__(cfg, "deepseek", cfg.deepseek_url, cfg.deepseek_api_key, "DEEPSEEK_API_KEY",
+                         cfg.deepseek_modelo)
 
 
 class LLMFalso:
@@ -195,7 +219,7 @@ class TTSFalso:
 # ---------------------------------------------------------------- fábrica
 
 _STT = {"whisper_local": STTWhisperLocal, "groq": STTGroq, "falso": STTFalso}
-_LLM = {"ollama": LLMOllama, "groq": LLMGroq, "falso": LLMFalso}
+_LLM = {"ollama": LLMOllama, "groq": LLMGroq, "deepseek": LLMDeepSeek, "falso": LLMFalso}
 _TTS = {"edge": TTSEdge, "gtts": TTSGtts, "falso": TTSFalso}
 
 

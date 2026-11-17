@@ -43,6 +43,9 @@ class Resultado:
 
 def limitar_texto(texto: str, maximo: int) -> str:
     """Limpia símbolos que no se leen bien en voz y recorta respetando frases."""
+    # Modelos de razonamiento (p. ej. deepseek-r1 en Ollama) escriben <think>...</think>:
+    # eso no se debe leer en voz alta.
+    texto = re.sub(r"<think>.*?(</think>|$)", "", texto, flags=re.DOTALL | re.IGNORECASE)
     texto = re.sub(r"[*#_`>|~]", "", texto)
     texto = re.sub(r"\s+", " ", texto).strip()
     if len(texto) <= maximo:
