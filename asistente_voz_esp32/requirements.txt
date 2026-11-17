@@ -1,0 +1,15 @@
+# Servidor
+fastapi>=0.110
+uvicorn[standard]>=0.29
+httpx>=0.27
+python-dotenv>=1.0
+numpy>=1.26
+av>=12.0            # decodificar MP3 del TTS y convertir a WAV 16 kHz (incluye FFmpeg)
+
+# Proveedores gratuitos
+faster-whisper>=1.0 # STT local (STT_PROVEEDOR=whisper_local)
+edge-tts>=6.1       # TTS sin clave (TTS_PROVEEDOR=edge)
+gTTS>=2.5           # TTS alternativo (TTS_PROVEEDOR=gtts)
+
+# Pruebas
+pytest>=8.0

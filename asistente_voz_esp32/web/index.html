@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ESP32-S3 Virtual</title>
+  <link rel="stylesheet" href="/web/estilos.css">
+</head>
+<body>
+<header class="cabecera">
+  <div>
+    <h1>Asistente de voz · ESP32-S3 virtual</h1>
+    <p class="sub">Simulación del hardware de la práctica: micrófono I2S → ESP32-S3 → Wi-Fi → servidor Python (STT · LLM · TTS) → amplificador I2S → parlante</p>
+  </div>
+</header>
+
+<main class="rejilla">
+  <!-- ======================= HARDWARE SIMULADO ======================= -->
+  <section class="tarjeta hardware">
+    <h2>Hardware</h2>
+
+    <div class="placa">
+      <div class="modulo mic" title="Micrófono INMP441 (I2S)">
+        <span class="etq">INMP441</span>
+        <div class="medidor"><div id="nivel"></div></div>
+        <span class="pines">SCK · WS · SD</span>
+      </div>
+
+      <div class="esp32">
+        <span class="etq">ESP32-S3</span>
+        <div class="leds">
+          <span class="led" id="led-power" title="Encendido"></span><small>PWR</small>
+          <span class="led" id="led-wifi" title="Wi-Fi"></span><small>WiFi</small>
+          <span class="led" id="led-rec" title="Grabando"></span><small>REC</small>
+          <span class="led" id="led-net" title="Enviando / esperando"></span><small>NET</small>
+        </div>
+        <div class="estado" id="estado">APAGADO</div>
+      </div>
+
+      <div class="modulo amp" title="Amplificador MAX98357A + parlante">
+        <span class="etq">MAX98357A</span>
+        <div class="parlante" id="parlante"><span></span></div>
+        <span class="pines">BCLK · LRC · DIN</span>
+      </div>
+    </div>
+
+    <div class="controles">
+      <button id="btn-encender" class="secundario">⏻ Encender ESP32</button>
+      <button id="btn-hablar" class="pulsador" disabled>
+        <span class="tapa"></span>
+        <span class="texto">Mantén presionado para hablar<br><small>(o la barra espaciadora)</small></span>
+      </button>
+      <div class="cuenta" id="cuenta"></div>
+    </div>
+
+    <details class="config" open>
+      <summary>Configuración del firmware <small>(equivale a <code>secrets.h</code>)</small></summary>
+      <label>Red Wi-Fi (SSID) <input id="cfg-ssid" value="Laboratorio_IA"></label>
+      <label>URL del servidor <input id="cfg-url" placeholder="http://192.168.1.50:8000"></label>
+      <label>Token del dispositivo <input id="cfg-token" type="password" placeholder="DEVICE_TOKEN del .env"></label>
+      <label>ID del dispositivo <input id="cfg-id" value="esp32-virtual-01"></label>
+    </details>
+
+    <details class="config">
+      <summary>Pruebas</summary>
+      <label>Simular falla en la próxima consulta
+        <select id="cfg-falla">
+          <option value="">Ninguna</option>
+          <option value="red">Comunicación (Wi-Fi / servidor caído)</option>
+          <option value="token">Token inválido</option>
+          <option value="stt">Servicio STT</option>
+          <option value="llm">Servicio LLM</option>
+          <option value="tts">Servicio TTS</option>
+        </select>
+      </label>
+      <div class="fila-botones">
+        <label class="boton-archivo secundario">📁 Enviar archivo de audio<input id="archivo" type="file" accept="audio/*" hidden></label>
+        <button id="btn-escuchar" class="secundario" disabled>▶ Escuchar última grabación</button>
+        <a id="btn-descargar" class="secundario boton-enlace deshabilitado" download="grabacion_16k.wav">⬇ Descargar WAV</a>
+        <button id="btn-contexto" class="secundario" disabled>🧹 Borrar contexto</button>
+      </div>
+    </details>
+  </section>
+
+  <!-- ======================= CONVERSACIÓN Y TIEMPOS ======================= -->
+  <section class="tarjeta">
+    <h2>Último turno</h2>
+    <div class="turno">
+      <div class="burbuja usuario"><span class="quien">Tú (STT)</span><p id="txt-pregunta">—</p></div>
+      <div class="burbuja asistente"><span class="quien">Asistente (LLM)</span><p id="txt-respuesta">—</p></div>
+    </div>
+
+    <h3>Tiempos de respuesta</h3>
+    <div class="barras" id="barras"></div>
+    <p class="nota" id="nota-tiempos">Haz una consulta para medir los tiempos.</p>
+
+    <h3>¿Quién hace qué?</h3>
+    <ol class="flujo" id="flujo">
+      <li data-actor="esp32">Detecta el botón y graba el audio I2S (16 kHz · 16 bits · mono)</li>
+      <li data-actor="esp32">Envía el WAV por HTTP POST con el token</li>
+      <li data-actor="servidor">Valida el token, el formato y la duración</li>
+      <li data-actor="ia">STT: convierte la voz en texto</li>
+      <li data-actor="ia">LLM: genera la respuesta en español</li>
+      <li data-actor="ia">TTS: convierte la respuesta en voz</li>
+      <li data-actor="servidor">Convierte el audio a WAV 16 kHz, guarda el log y lo devuelve</li>
+      <li data-actor="esp32">Reproduce la respuesta por el MAX98357A</li>
+    </ol>
+    <div class="leyenda"><span class="chip esp32">ESP32-S3</span><span class="chip servidor">Servidor Python</span><span class="chip ia">Servicios de IA</span></div>
+  </section>
+
+  <!-- ======================= MONITOR SERIE ======================= -->
+  <section class="tarjeta monitor-tarjeta">
+    <h2>Monitor serie <small>115200 baud</small><button id="btn-limpiar" class="mini">limpiar</button></h2>
+    <pre id="monitor" class="monitor"></pre>
+  </section>
+
+  <!-- ======================= REGISTRO ======================= -->
+  <section class="tarjeta registro-tarjeta">
+    <h2>Registro de actividad <small>logs/conversaciones.jsonl</small><button id="btn-registro" class="mini">actualizar</button></h2>
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Hora</th><th>Turno</th><th>Estado</th><th>Pregunta</th><th>Respuesta / error</th><th>STT</th><th>LLM</th><th>TTS</th><th>Total</th></tr></thead>
+        <tbody id="tabla-registro"><tr><td colspan="9" class="vacio">Sin datos</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script src="/web/esp32_virtual.js"></script>
+</body>
+</html>
