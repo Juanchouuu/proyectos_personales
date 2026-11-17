@@ -26,6 +26,8 @@ que usaría la placa real, así que más adelante se puede conectar un ESP32-S3 
 
 ## Instalación
 
+**En Windows, sigue la guía paso a paso `GUIA_INSTALACION_WINDOWS.pdf`, que viene en esta carpeta.**
+
 Requisitos: Python 3.10 o superior.
 
 ```bash
